@@ -1,0 +1,30 @@
+﻿---
+ID: "4e714592-5a04-48f7-b998-a2d1b6536391"
+Parent: "24390bdd-13a7-425f-9e29-64b60f2cee4e"
+Template: "626c308f-5897-48f3-bf83-aefb503cb1e4"
+Path: "/sitecore/content/main/main-website/Home/Data/WorldpayNav/Developers"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260512T214426Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "331a7b29-2138-4534-9c29-f6150e6314df"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\federico.mujica@sitecore.com
+    - ID: "cc6b4b36-fd8b-482b-a733-6c22b926890a"
+      Hint: LinkUrl
+      Value: |
+        <link text="Developers" linktype="external" url="https://www.worldpay.com/en/developers" target="" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260512T214426Z
+    - ID: "e9a144f9-e4d5-44c2-b90b-eae536749d5d"
+      Hint: LinkText
+      Value: Developers

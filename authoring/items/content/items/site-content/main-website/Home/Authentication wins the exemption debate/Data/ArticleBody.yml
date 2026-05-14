@@ -1,0 +1,29 @@
+﻿---
+ID: "cc63c95b-66f4-4ee5-bf4f-a6d853eae0be"
+Parent: "475f9449-9a9c-4f72-83a5-b268650510c5"
+Template: "d74f19b9-2239-4f05-8b2f-727393777ed8"
+Path: "/sitecore/content/main/main-website/Home/Authentication wins the exemption debate/Data/ArticleBody"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1e23eeda-e14c-429f-8ca5-4f1d3de10949"
+      Hint: Body
+      Value: "<h2>The exemption landscape is shifting</h2><p>As payment authentication evolves, the debate between Strong Customer Authentication (SCA) exemptions and full authentication has intensified. Merchants face a critical decision: optimize for frictionless checkout through exemptions, or embrace authentication to build long-term trust and reduce fraud.</p><h2>Why authentication is winning</h2><p>Our data shows that merchants who lean into authentication rather than avoiding it see measurably better outcomes. Transaction approval rates climb by 3-5 percentage points, fraud losses drop significantly, and customer trust grows over time.</p><p>The key insight is that modern authentication methods like 3DS2 are far less disruptive than their predecessors. Biometric verification, device fingerprinting, and risk-based challenge flows mean that the vast majority of legitimate customers pass through authentication without friction.</p><h2>SoftPOS partnerships amplify the advantage</h2><p>In 2024, SoftPOS partnerships have emerged as a powerful enabler. By turning smartphones into payment terminals, SoftPOS solutions create new opportunities for in-person authentication that were previously impossible for small and mid-sized merchants.</p><p>These partnerships reduce fraud at the point of sale, boost approval rates for card-present transactions, and keep merchants aligned with evolving scheme mandates and regulatory requirements across markets.</p><h2>The path forward</h2><p>For merchants still relying heavily on exemptions, the message is clear: the exemption strategy has a ceiling. Authentication, properly implemented with modern protocols and smart risk scoring, delivers better long-term results across every metric that matters — approvals, fraud rates, chargebacks, and customer satisfaction.</p><p>Worldpay's global data confirms this trend across all major markets and card schemes. The future belongs to merchants who authenticate intelligently.</p>"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260512T220118Z
+    - ID: "8a1bde30-c1a6-4eb1-b30a-c9202cd3980a"
+      Hint: Title
+      Value: 
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "423927f4-8337-4662-b284-45bce565d2b3"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\federico.mujica@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260512T220135Z

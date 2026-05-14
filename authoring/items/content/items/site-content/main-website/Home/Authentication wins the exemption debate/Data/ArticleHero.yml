@@ -1,0 +1,33 @@
+﻿---
+ID: "f25d5b65-bd25-449f-b890-bbfe240044f7"
+Parent: "475f9449-9a9c-4f72-83a5-b268650510c5"
+Template: "ebb89bff-86ff-496d-b4f7-57fe722342b6"
+Path: "/sitecore/content/main/main-website/Home/Authentication wins the exemption debate/Data/ArticleHero"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260512T220105Z
+    - ID: "2c186372-9b86-4940-b496-6ae5b5bdac3a"
+      Hint: Subtitle
+      Value: SoftPOS partnerships in 2024 reduced fraud, boosts approvals and keeps merchants aligned with scheme and regulatory changes.
+    - ID: "729698a6-1380-45b1-b348-a464e5f9825a"
+      Hint: HeroImage
+      Value: |
+        <Image src="https://ffde.sitecoresandbox.cloud/api/public/content/89438-insight-authentication?v=d9bc203b" dam-id="qKbiFycnTiGP11JRjqdzIQ" width="1440" height="525" alt="Authentication wins the exemption debate" dam-content-type="Image" thumbnailsrc="https://ffde.sitecoresandbox.cloud/api/gateway/89438/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "069b1a7f-ba61-481b-9cc3-0a63b7dd2ac6"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\federico.mujica@sitecore.com
+    - ID: "c61c7b75-21bd-4b9c-995e-671c9605de14"
+      Hint: Title
+      Value: Authentication wins the exemption debate
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260513T084247Z

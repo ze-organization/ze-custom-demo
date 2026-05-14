@@ -1,0 +1,37 @@
+﻿---
+ID: "49b54ad9-e236-41ba-8cd1-29cf3b6323bf"
+Parent: "dba7b18e-20ef-4c00-b9f3-b0915c52e5d7"
+Template: "e2014bdc-3af2-4add-a731-86e873ebf24c"
+Path: "/sitecore/content/main/main-website/Home/Data/WorldpayInsights/Localization Article"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260512T215843Z
+    - ID: "3d6a0f6b-523e-491a-8b4d-2b84f10855c2"
+      Hint: CardLink
+      Value: |
+        <link text="Read more" linktype="external" url="https://www.worldpay.com/en/insights/articles/localization-revenue" target="" />
+    - ID: "3f85410a-d1a3-426d-9908-777c3a0b7de0"
+      Hint: CardDescription
+      Value: "Delivering your payments strategy to local currencies through regional and local payment acceptance - it opens the door to scalable, sustainable growth."
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2739aded-8daf-457d-a127-1500ee811f70"
+    - ID: "ad732d62-2a3e-452a-b7d6-8f943b616f6d"
+      Hint: CardImage
+      Value: |
+        <Image src="https://ffde.sitecoresandbox.cloud/api/public/content/89460-insight-auth-rates?v=76a90441" dam-id="gBjx2FPgRm6ats4nadu7Mg" width="1440" height="525" alt="Localization unlocks global revenue" dam-content-type="Image" thumbnailsrc="https://ffde.sitecoresandbox.cloud/api/gateway/89460/thumbnail" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\federico.mujica@sitecore.com
+    - ID: "c0500111-9439-41c0-89e5-d44cf419ef50"
+      Hint: CardTitle
+      Value: Localization unlocks global revenue
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260513T085027Z

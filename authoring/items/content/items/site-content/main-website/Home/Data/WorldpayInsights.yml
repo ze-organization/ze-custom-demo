@@ -1,0 +1,29 @@
+﻿---
+ID: "dba7b18e-20ef-4c00-b9f3-b0915c52e5d7"
+Parent: "b0d9ad8d-af09-4777-b4fa-d3524d6fd910"
+Template: "e94d3c21-7de5-4270-b691-8e29673a1e2c"
+Path: "/sitecore/content/main/main-website/Home/Data/WorldpayInsights"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260512T215811Z
+    - ID: "3775c623-2a5c-4d86-a41f-9717038d7d73"
+      Hint: Title
+      Value: Our expertise is your edge
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8a368ed2-0934-4630-a00a-978ade31d44e"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\federico.mujica@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260512T215820Z
+    - ID: "f9d6a2e8-15ee-4088-b4eb-60e1c66626d8"
+      Hint: Description
+      Value: We know payments. Check out our latest articles, white papers and market reports.

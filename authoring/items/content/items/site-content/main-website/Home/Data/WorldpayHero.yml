@@ -1,0 +1,40 @@
+﻿---
+ID: "ab49c09f-5e39-4477-9ecf-6e67324bb090"
+Parent: "b0d9ad8d-af09-4777-b4fa-d3524d6fd910"
+Template: "ebb89bff-86ff-496d-b4f7-57fe722342b6"
+Path: "/sitecore/content/main/main-website/Home/Data/WorldpayHero"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260512T214452Z
+    - ID: "2c186372-9b86-4940-b496-6ae5b5bdac3a"
+      Hint: Subtitle
+      Value: With Worldpay, businesses of all sizes can boost revenue, innovate at pace and create payment experiences their customers love.
+    - ID: "61c5bc1a-453d-4416-8e01-b150cdcfa7b1"
+      Hint: PrimaryLink
+      Value: |
+        <link text="Talk to an expert" linktype="external" url="https://www.worldpay.com/en/contact" target="" />
+    - ID: "729698a6-1380-45b1-b348-a464e5f9825a"
+      Hint: HeroImage
+      Value: |
+        <Image src="https://ffde.sitecoresandbox.cloud/api/public/content/790ba9a9524f493da0bf8cd9ec8c55a5?v=a3a6c46c" dam-id="FsyahTitRSyjbclWARKPCQ" width="606" height="522" alt="Recording 2026-05-13 103756.mp4" dam-content-type="Video" thumbnailsrc="https://ffde.sitecoresandbox.cloud/api/gateway/89300/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "05afc4a7-ebfa-44d1-aa37-5df6df761c93"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\federico.mujica@sitecore.com
+    - ID: "c61c7b75-21bd-4b9c-995e-671c9605de14"
+      Hint: Title
+      Value: Making everyday commerce better
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260513T084012Z

@@ -1,0 +1,33 @@
+﻿---
+ID: "0be37f83-2c62-4baa-8f4f-84954f42aa4c"
+Parent: "a68d90a6-dae6-4c18-b90a-3aefeeb2761e"
+Template: "e2014bdc-3af2-4add-a731-86e873ebf24c"
+Path: "/sitecore/content/main/main-website/Home/Authentication wins the exemption debate/Data/RelatedArticles/Agentic Commerce Related"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260512T220156Z
+    - ID: "3d6a0f6b-523e-491a-8b4d-2b84f10855c2"
+      Hint: CardLink
+      Value: |
+        <link text="Read more" linktype="external" url="https://www.worldpay.com/en/insights/articles/agentic-commerce" target="" />
+    - ID: "3f85410a-d1a3-426d-9908-777c3a0b7de0"
+      Hint: CardDescription
+      Value: "Agentic commerce is rewriting the commerce reality - reshaping retail, travel, finance, gambling."
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ddffb86a-d8a7-48e0-b4aa-60a009075d91"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\federico.mujica@sitecore.com
+    - ID: "c0500111-9439-41c0-89e5-d44cf419ef50"
+      Hint: CardTitle
+      Value: How agentic commerce will transform key industries
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260512T220156Z

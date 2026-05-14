@@ -1,0 +1,41 @@
+﻿---
+ID: "ff0cf51d-982f-43b0-b2ed-fea54460ca5b"
+Parent: "89bf0c29-e8b8-40b2-bb51-278359a9d199"
+Template: "b9bee1fa-9d3f-4d29-87f2-436a73d458a2"
+Path: "/sitecore/content/main/main-website/Home/Data/WorldpayGPRPromo/Agentic Commerce Block"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0f19d69d-c1df-4021-b4ee-74e1c4da6651"
+      Hint: BlockTitle
+      Value: Payments are about to change forever
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260512T214550Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\federico.mujica@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\federico.mujica@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1dfa4016-aabb-468a-bf5d-996b3fe23e7b"
+    - ID: "903421ca-6421-4ad7-af63-140e15af18f5"
+      Hint: BlockLink
+      Value: |
+        <link text="Download report" linktype="external" url="https://www.worldpay.com/en/insights/global-payments-report" target="" />
+    - ID: "b71a0498-8daa-4972-b6a7-fd775e8e1c21"
+      Hint: BlockDescription
+      Value: What 8,000 global consumers say about the future of agentic commerce.
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\federico.mujica@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260512T214550Z

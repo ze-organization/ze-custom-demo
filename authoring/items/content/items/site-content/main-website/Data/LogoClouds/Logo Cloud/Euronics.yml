@@ -1,0 +1,37 @@
+﻿---
+ID: "5195c4ec-97f6-47e8-9823-aa7426a4e82e"
+Parent: "a20a4fad-1eb6-4cfd-a2b0-4f89f4d81978"
+Template: "c48880b3-b0b9-49ea-bf19-931c68a8a37c"
+Path: "/sitecore/content/main/main-website/Data/LogoClouds/Logo Cloud/Euronics"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "17cc8e99-43cd-4f35-8ed4-6c7a13334449"
+      Hint: CompanyName
+      Value: Euronics
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260513T112306Z
+    - ID: "6d1ac8e5-0897-4beb-af96-3b2bb80b0668"
+      Hint: LogoImage
+      Value: |
+        <Image src="https://ffde.sitecoresandbox.cloud/api/public/content/89369-logo-euronics?v=00cbf60f" dam-id="RaCOtrtaSQibOIyYFGz5HA" width="414" height="208" alt="logo-euronics.svg" dam-content-type="Image" thumbnailsrc="https://ffde.sitecoresandbox.cloud/api/gateway/89369/thumbnail" />
+    - ID: "736a53fe-18e4-4fc8-a2c3-164fa8dc9391"
+      Hint: LogoLink
+      Value: |
+        <link linktype="internal" id="d8c38122-8db8-4212-bbc5-0ff89624fb0a" anchor="" querystring="" target="" class="" text="" title=""/>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "cd3c4264-62b7-4aba-b59b-38aec96ad870"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\federico.mujica@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260513T112331Z

@@ -1,0 +1,30 @@
+﻿---
+ID: "212dffa5-20f6-4b30-9fe4-c02d677e985c"
+Parent: "8254eb2c-9f05-4082-8cb7-48a968ea6ef1"
+Template: "626c308f-5897-48f3-bf83-aefb503cb1e4"
+Path: "/sitecore/content/main/main-website/Data/NavigationHeaders/Main Navigation/Products"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260513T112239Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "864e44ed-2ac1-464b-88bb-c8370cd3e56f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\federico.mujica@sitecore.com
+    - ID: "cc6b4b36-fd8b-482b-a733-6c22b926890a"
+      Hint: LinkUrl
+      Value: |
+        <link text="Products" linktype="external" url="https://www.worldpay.com/en/products" target="" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260513T112240Z
+    - ID: "e9a144f9-e4d5-44c2-b90b-eae536749d5d"
+      Hint: LinkText
+      Value: Products

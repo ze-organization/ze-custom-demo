@@ -1,0 +1,38 @@
+﻿---
+ID: "e2c24f88-28ad-428d-a0e3-75d3270d9f63"
+Parent: "23e45cbb-6ce4-44e8-b7e8-49c5ccd5cf77"
+Template: "23e45cbb-6ce4-44e8-b7e8-49c5ccd5cf77"
+Path: "/sitecore/templates/Project/fmc-custom-demo/Components/Content/DualPromoBanner/__Standard Values"
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: "{B9BEE1FA-9D3F-4D29-87F2-436A73D458A2}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "9c66ebe5-0559-4b05-b4df-065cdbe2b7f5"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260512T213156Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\federico.mujica@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\federico.mujica@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2fe9071a-d573-4c2a-bdde-a49ece90a562"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\federico.mujica@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260512T213207Z

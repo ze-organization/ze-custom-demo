@@ -1,0 +1,40 @@
+﻿---
+ID: "6caf6b84-96d6-4bc5-94be-78bbe0c246a8"
+Parent: "d7dab910-add3-4de1-8eb2-0f39f24336e3"
+Template: "e2014bdc-3af2-4add-a731-86e873ebf24c"
+Path: "/sitecore/content/main/main-website/Home/Data/WorldpayWeAreEverywhere/Software platforms"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260513T105821Z
+    - ID: "3d6a0f6b-523e-491a-8b4d-2b84f10855c2"
+      Hint: CardLink
+      Value: |
+        <link linktype="internal" id="d8c38122-8db8-4212-bbc5-0ff89624fb0a" anchor="" querystring="" target="" class="" text="Get started" title=""/>
+    - ID: "3f85410a-d1a3-426d-9908-777c3a0b7de0"
+      Hint: CardDescription
+      Value: "<p>Worldpay is redefining embedded payments, making them intuitive, customer-centric experiences that can sharpen the competitive edge of software platforms.</p>"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a12aaa31-f82d-4711-aaaf-52714b2027ec"
+    - ID: "ad732d62-2a3e-452a-b7d6-8f943b616f6d"
+      Hint: CardImage
+      Value: |
+        <Image src="https://ffde.sitecoresandbox.cloud/api/public/content/542b8bd4132141dbb0706789424f4422?v=c2bd737b" dam-id="nbVmQJbUQPenJGZ4KNuQLg" width="970" height="970" alt="Platforms_card_image.svg" dam-content-type="Image" thumbnailsrc="https://ffde.sitecoresandbox.cloud/api/gateway/89842/thumbnail" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\federico.mujica@sitecore.com
+    - ID: "c0500111-9439-41c0-89e5-d44cf419ef50"
+      Hint: CardTitle
+      Value: Software platforms
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260513T105901Z

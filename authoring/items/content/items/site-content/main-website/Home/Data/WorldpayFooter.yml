@@ -1,0 +1,27 @@
+﻿---
+ID: "38921cd1-f81a-4823-8384-8f1ff2c8f3d7"
+Parent: "b0d9ad8d-af09-4777-b4fa-d3524d6fd910"
+Template: "98b34bff-0d74-4798-b2d8-cb52c19f7c92"
+Path: "/sitecore/content/main/main-website/Home/Data/WorldpayFooter"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260512T215905Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2d66f838-7035-4828-8874-32f31b164aad"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\federico.mujica@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260513T084247Z
+    - ID: "e65848de-74a2-4211-b246-a022b7da6f6e"
+      Hint: BrandLogo
+      Value: |
+        <Image src="https://ffde.sitecoresandbox.cloud/api/public/content/89317-logo-worldpay-white?v=e5dc696c" dam-id="HMESZN94QYmwqTMkzFYIBg" width="635" height="227" alt="Worldpay logo white" dam-content-type="Image" thumbnailsrc="https://ffde.sitecoresandbox.cloud/api/gateway/89317/thumbnail" />

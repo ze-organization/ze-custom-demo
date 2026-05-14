@@ -1,0 +1,40 @@
+﻿---
+ID: "c1d6bcaa-5bd1-4c2c-9379-224d025f4a05"
+Parent: "b0d9ad8d-af09-4777-b4fa-d3524d6fd910"
+Template: "980cb544-bd26-4866-83bb-6dbeb9156558"
+Path: "/sitecore/content/main/main-website/Home/Data/WorldpayNeedHelp"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260512T215850Z
+    - ID: "492f28cd-0465-42ee-b7fe-df452729e9bd"
+      Hint: PrimaryLink
+      Value: |
+        <link text="Get support" linktype="external" url="https://www.worldpay.com/en/support" target="" />
+    - ID: "5a17dd1d-78a3-4c4e-b3f4-74cd24cd1793"
+      Hint: Description
+      Value: Contact one of our representatives today.
+    - ID: "5df404ee-3194-414a-844d-689d3b47355c"
+      Hint: Title
+      Value: "Need help?"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "cef91944-029b-4756-9713-9d5f3962ab61"
+    - ID: "ba6a94ea-4b1f-4160-a0db-35b15779afe7"
+      Hint: BackgroundImage
+      Value: |
+        <Image src="https://ffde.sitecoresandbox.cloud/api/public/content/75d1b927010a46219421cbff58769e4e?v=5585ebc3" dam-id="onGsAP5XSD6O1Ro0n5fWIg" alt="Needhelpherosquare-ezgif.webp" dam-content-type="Image" thumbnailsrc="https://ffde.sitecoresandbox.cloud/api/gateway/89778/thumbnail" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\federico.mujica@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260513T105003Z
