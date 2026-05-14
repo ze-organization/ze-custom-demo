@@ -76,9 +76,11 @@ const Logo = ({
 
 const NavLinks = ({
   className,
+  linkClassName,
   items,
 }: {
   className?: string;
+  linkClassName?: string;
   items: NavigationLinkFields[];
 }) => (
   <nav className={cn('hidden md:flex items-center gap-6', className)}>
@@ -86,8 +88,11 @@ const NavLinks = ({
       <ContentSdkLink
         key={item.id}
         field={item.linkUrl?.jsonValue}
-        className="text-sm font-medium transition-opacity hover:opacity-70"
-        style={{ color: 'var(--brand-header-fg, inherit)' }}
+        className={cn(
+          'text-sm font-medium transition-opacity hover:opacity-70',
+          linkClassName
+        )}
+        style={linkClassName ? undefined : { color: 'var(--brand-header-fg, inherit)' }}
       >
         {item.linkText?.jsonValue?.value && (
           <Text field={item.linkText?.jsonValue} />
@@ -136,16 +141,22 @@ const CtaButton = ({
   label,
   link,
   isEditing,
+  pill,
 }: {
   className?: string;
   label?: Field<string>;
   link?: LinkField;
   isEditing?: boolean;
+  /** Pill CTA (Global Payments marketing header) */
+  pill?: boolean;
 }) => {
   if (!link?.value?.href && !isEditing) return null;
 
   const ctaClassName = cn(
-    'hidden md:inline-flex items-center rounded-md px-4 py-2 text-sm font-semibold transition-opacity hover:opacity-90',
+    'hidden md:inline-flex items-center text-sm font-semibold transition-opacity hover:opacity-90',
+    pill
+      ? 'rounded-[var(--brand-button-radius,9999px)] px-6 py-2.5 shadow-sm'
+      : 'rounded-md px-4 py-2',
     className
   );
   const ctaStyle = {
@@ -313,6 +324,48 @@ export const Minimal = ({ fields, params }: NavigationHeaderProps): JSX.Element 
         <div className="mx-auto flex max-w-7xl items-center justify-center px-4 py-4 sm:px-6">
           <Logo brandLogo={brandLogo} />
         </div>
+      </header>
+    </div>
+  );
+};
+
+/* ────────────────────────────────────────────
+   GlobalPayments — marketing header (globalpayments.com: wide container, pill CTA, nav rhythm)
+   ──────────────────────────────────────────── */
+export const GlobalPayments = ({ fields, params, page }: NavigationHeaderProps): JSX.Element => {
+  const { styles, RenderingIdentifier } = params;
+  const isEditing = page?.mode?.isEditing;
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const datasource = fields?.data?.datasource;
+  if (!datasource) return <NavigationHeaderDefaultComponent />;
+
+  const links = datasource.children?.results || [];
+  const brandLogo = datasource.brandLogo?.jsonValue;
+
+  return (
+    <div className={cn('component navigation-header', styles)} id={RenderingIdentifier}>
+      <header
+        className="w-full border-b border-[color-mix(in_srgb,var(--brand-header-fg,#0a0a0a)_8%,transparent)] bg-[var(--brand-header-bg,#ffffff)] shadow-[0_1px_0_rgba(15,23,42,0.04)]"
+      >
+        <div className="mx-auto flex max-w-[var(--gp-container-max,84rem)] items-center justify-between gap-4 px-[var(--gp-container-px,1.5rem)] py-3.5 md:py-4">
+          <Logo brandLogo={brandLogo} className="min-w-0 shrink" />
+          <NavLinks
+            items={links}
+            className="gap-8 lg:gap-10"
+            linkClassName="!text-[0.9375rem] font-medium leading-none tracking-[0.01em] !text-[var(--brand-header-fg,#0a0a0a)] hover:!opacity-100 hover:!text-[var(--brand-primary)]"
+          />
+          <div className="flex shrink-0 items-center gap-2 md:gap-3">
+            <CtaButton
+              label={datasource.ctaLabel?.jsonValue}
+              link={datasource.ctaLink?.jsonValue}
+              isEditing={isEditing}
+              pill
+            />
+            <MenuButton open={menuOpen} onClick={() => setMenuOpen(!menuOpen)} />
+          </div>
+        </div>
+        <MobileMenu items={links} open={menuOpen} onClose={() => setMenuOpen(false)} />
       </header>
     </div>
   );

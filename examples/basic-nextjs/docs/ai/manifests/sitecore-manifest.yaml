@@ -1303,6 +1303,8 @@ components:
         sectionName: "Data"
         fields:
           - { name: "GalleryImage", type: "Image" }
+          - { name: "VideoSourceUrl", type: "Single-Line Text" }
+          - { name: "VideoEmbedUrl", type: "Single-Line Text" }
           - { name: "Caption", type: "Single-Line Text" }
           - { name: "AltText", type: "Single-Line Text" }
         baseTemplatesSet: true
@@ -1913,6 +1915,8 @@ components:
           - { name: "Title", type: "Single-Line Text" }
           - { name: "Description", type: "Rich Text" }
           - { name: "FeatureImage", type: "Image" }
+          - { name: "VideoSourceUrl", type: "Single-Line Text" }
+          - { name: "VideoEmbedUrl", type: "Single-Line Text" }
           - { name: "PrimaryLink", type: "General Link" }
         baseTemplatesSet: true
         standardValues:

@@ -345,3 +345,6 @@ export const MegaFooter = (props: SiteFooterProps): JSX.Element => {
     </div>
   );
 };
+
+/* GlobalPayments demo variant — layout via theme tokens; extend for pixel tweaks */
+export const GlobalPayments = Default;

@@ -234,3 +234,81 @@ export const LogoRow = ({ fields, params, page }: TrustStatsRowProps): JSX.Eleme
     </div>
   );
 };
+
+/* GlobalPayments — stat band on royal panel (globalpayments.com trust strip) */
+export const GlobalPayments = ({ fields, params, page }: TrustStatsRowProps): JSX.Element => {
+  const { styles, RenderingIdentifier } = params;
+  const isEditing = page?.mode?.isEditing;
+  const datasource = fields?.data?.datasource;
+  if (!datasource) return <TrustStatsRowDefaultComponent />;
+  const items = datasource.children?.results || [];
+
+  const bandBg = 'var(--gp-stat-band-bg, var(--brand-dark, #0033a0))';
+  const bandFg = 'var(--gp-stat-band-fg, #ffffff)';
+  const bandMuted = 'var(--gp-stat-band-muted, rgba(255,255,255,0.78))';
+
+  return (
+    <div className={cn('component trust-stats-row', styles)} id={RenderingIdentifier}>
+      <section
+        className="w-full px-[var(--gp-container-px,1.5rem)] py-12 md:py-[4.5rem]"
+        style={{ backgroundColor: bandBg, color: bandFg }}
+      >
+        <div className="mx-auto max-w-[var(--gp-container-max,84rem)]">
+          {(datasource.eyebrowText?.jsonValue?.value ||
+            datasource.title?.jsonValue?.value ||
+            isEditing) && (
+            <div className="mx-auto mb-10 max-w-[48rem] text-center md:mb-14">
+              {(datasource.eyebrowText?.jsonValue?.value || isEditing) && (
+                <Text
+                  field={datasource.eyebrowText?.jsonValue}
+                  tag="span"
+                  className="mb-3 inline-block text-[0.6875rem] font-semibold uppercase tracking-[0.22em] text-white/85 sm:text-xs"
+                />
+              )}
+              {(datasource.title?.jsonValue?.value || isEditing) && (
+                <Text
+                  field={datasource.title?.jsonValue}
+                  tag="h2"
+                  className="text-[1.75rem] font-bold leading-[1.15] tracking-[-0.02em] text-white sm:text-[2rem] md:text-[2.25rem] font-[var(--brand-heading-font,inherit)]"
+                />
+              )}
+            </div>
+          )}
+          <div className="grid grid-cols-2 gap-x-4 gap-y-12 lg:grid-cols-4 lg:gap-x-0 lg:gap-y-0">
+            {items.map((item, index) => (
+              <div
+                key={item.id}
+                className={cn(
+                  'px-2 text-center sm:px-3 lg:px-6',
+                  index > 0 && 'lg:border-l lg:border-white/20'
+                )}
+              >
+                {(item.statValue?.jsonValue?.value || isEditing) && (
+                  <Text
+                    field={item.statValue?.jsonValue}
+                    tag="p"
+                    className="text-[clamp(2.125rem,4vw,3.25rem)] font-extrabold leading-none tracking-[-0.035em] text-white font-[var(--brand-heading-font,inherit)]"
+                  />
+                )}
+                {(item.statLabel?.jsonValue?.value || isEditing) && (
+                  <Text
+                    field={item.statLabel?.jsonValue}
+                    tag="p"
+                    className="mt-3 text-[0.6875rem] font-semibold uppercase leading-snug tracking-[0.2em] text-white/95 sm:text-xs"
+                  />
+                )}
+                {(item.statDescription?.jsonValue?.value || isEditing) && (
+                  <ContentSdkRichText
+                    field={item.statDescription?.jsonValue}
+                    className="mt-2 text-[0.9375rem] leading-[1.45] font-[var(--brand-body-font,inherit)] [&_p]:mb-0"
+                    style={{ color: bandMuted }}
+                  />
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};

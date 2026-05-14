@@ -443,3 +443,97 @@ export const Carousel = ({ fields, params, page }: FeatureCardsGridProps): JSX.E
     </div>
   );
 };
+
+/* ────────────────────────────────────────────
+   GlobalPayments — homepage-style cards (image-top, GP type scale; hides empty header)
+   Mirrors globalpayments.com lifestyle + insights rows vs icon-top Default.
+   ──────────────────────────────────────────── */
+const GpSectionHeader = ({
+  datasource,
+  isEditing,
+}: {
+  datasource: FeatureCardsGridDatasource;
+  isEditing?: boolean;
+}) => {
+  const hasTitle = Boolean(datasource.title?.jsonValue?.value?.trim());
+  const hasDescription = Boolean(datasource.description?.jsonValue?.value?.trim());
+  if (!hasTitle && !hasDescription && !isEditing) return null;
+
+  return (
+    <div className="mx-auto mb-12 max-w-[48rem] px-1 text-center md:mb-16">
+      {(hasTitle || isEditing) && (
+        <Text
+          field={datasource.title?.jsonValue}
+          tag="h2"
+          className="text-[2rem] font-bold leading-[1.15] tracking-[-0.02em] text-[var(--brand-fg,#0a0a0a)] md:text-[2.25rem] md:leading-[1.1] font-[var(--brand-heading-font,inherit)]"
+        />
+      )}
+      {(hasDescription || isEditing) && (
+        <ContentSdkRichText
+          field={datasource.description?.jsonValue}
+          className="mt-4 text-[1.125rem] leading-[1.625] text-[#374151] font-[var(--brand-body-font,inherit)] [&_p]:mb-0"
+        />
+      )}
+    </div>
+  );
+};
+
+export const GlobalPayments = ({ fields, params, page }: FeatureCardsGridProps): JSX.Element => {
+  const { styles, RenderingIdentifier } = params;
+  const isEditing = page?.mode?.isEditing;
+  const datasource = fields?.data?.datasource;
+  if (!datasource) return <FeatureCardsGridDefaultComponent />;
+  const cards = datasource.children?.results || [];
+
+  return (
+    <div className={cn('component feature-cards-grid', styles)} id={RenderingIdentifier}>
+      <section
+        className="w-full px-[var(--gp-container-px,1rem)] py-[var(--gp-section-py,3rem)] sm:px-5 md:px-6 md:py-[var(--gp-section-py-md,4.5rem)]"
+        style={{ backgroundColor: 'var(--brand-bg, #ffffff)' }}
+      >
+        <div className="mx-auto max-w-[var(--gp-container-max)]">
+          <GpSectionHeader datasource={datasource} isEditing={isEditing} />
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-7 lg:grid-cols-3 lg:gap-8">
+            {cards.map((card) => (
+              <article
+                key={card.id}
+                className="flex flex-col overflow-hidden rounded-[var(--brand-card-radius,1rem)] border border-[var(--brand-border,#e2e8f0)] bg-[var(--brand-bg,#ffffff)] shadow-[0_1px_2px_rgba(15,23,42,0.06)]"
+              >
+                {(card.cardImage?.jsonValue?.value?.src || isEditing) && (
+                  <div className="relative aspect-[4/5] w-full min-h-[220px] bg-[var(--brand-muted,#e8f4fc)] md:min-h-[260px]">
+                    <ContentSdkImage
+                      field={card.cardImage?.jsonValue}
+                      className="h-full w-full object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  </div>
+                )}
+                <div className="flex flex-1 flex-col px-5 pb-7 pt-6 md:px-6 md:pb-8 md:pt-7">
+                  {(card.cardTitle?.jsonValue?.value || isEditing) && (
+                    <Text
+                      field={card.cardTitle?.jsonValue}
+                      tag="h3"
+                      className="text-[1.25rem] font-semibold leading-snug tracking-[-0.015em] text-[var(--brand-fg,#0a0a0a)] md:text-[1.375rem] md:leading-[1.25] font-[var(--brand-heading-font,inherit)]"
+                    />
+                  )}
+                  {(card.cardDescription?.jsonValue?.value || isEditing) && (
+                    <ContentSdkRichText
+                      field={card.cardDescription?.jsonValue}
+                      className="mt-3 flex-1 text-[1.125rem] leading-[1.625] text-[#374151] font-[var(--brand-body-font,inherit)] [&_p]:mb-0"
+                    />
+                  )}
+                  {(card.cardLink?.jsonValue?.value?.href || isEditing) && (
+                    <ContentSdkLink
+                      field={card.cardLink?.jsonValue}
+                      className="mt-5 inline-flex w-fit text-sm font-semibold tracking-wide text-[var(--brand-primary,#262aff)] underline decoration-2 underline-offset-[5px] transition-opacity hover:opacity-85"
+                    />
+                  )}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};

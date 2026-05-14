@@ -318,3 +318,48 @@ export const Minimal = ({ fields, params, page }: HeroBannerProps): JSX.Element 
     </div>
   );
 };
+
+/* GlobalPayments — light marketing hero, centered copy, optional hero image band */
+export const GlobalPayments = ({ fields, params, page }: HeroBannerProps): JSX.Element => {
+  const { styles, RenderingIdentifier } = params;
+  const isEditing = page?.mode?.isEditing;
+
+  if (!fields) return <HeroBannerDefaultComponent />;
+
+  return (
+    <div className={cn('component hero-banner', styles)} id={RenderingIdentifier}>
+      <section
+        className="w-full px-4 pb-10 pt-16 md:pb-16 md:pt-24"
+        style={{
+          backgroundColor: 'var(--brand-bg, #ffffff)',
+          color: 'var(--brand-fg, #111111)',
+        }}
+      >
+        <div className="mx-auto max-w-[84rem] space-y-8 text-center">
+          {(fields.Title?.value || isEditing) && (
+            <Text
+              field={fields.Title}
+              tag="h1"
+              className="text-balance text-4xl font-black tracking-tight sm:text-5xl md:text-[3.25rem] md:leading-tight font-[var(--brand-heading-font,inherit)]"
+            />
+          )}
+          {(fields.Subtitle?.value || isEditing) && (
+            <ContentSdkRichText
+              field={fields.Subtitle}
+              className="mx-auto max-w-3xl text-lg leading-relaxed text-[var(--brand-muted-foreground)] md:text-xl"
+            />
+          )}
+          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+            <PrimaryButton field={fields.PrimaryLink} isEditing={isEditing} />
+            <SecondaryButton field={fields.SecondaryLink} isEditing={isEditing} />
+          </div>
+          {(fields.HeroImage?.value?.src || isEditing) && (
+            <div className="mx-auto mt-10 max-w-5xl overflow-hidden rounded-[var(--brand-card-radius,1rem)] shadow-sm ring-1 ring-[var(--brand-border)]">
+              <ContentSdkImage field={fields.HeroImage} className="h-auto w-full object-cover" />
+            </div>
+          )}
+        </div>
+      </section>
+    </div>
+  );
+};

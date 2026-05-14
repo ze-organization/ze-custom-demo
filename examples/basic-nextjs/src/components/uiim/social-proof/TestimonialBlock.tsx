@@ -334,3 +334,6 @@ export const WithPhoto = ({ fields, params, page }: TestimonialBlockProps): JSX.
     </div>
   );
 };
+
+/* GlobalPayments demo variant — layout via theme tokens; extend for pixel tweaks */
+export const GlobalPayments = Default;

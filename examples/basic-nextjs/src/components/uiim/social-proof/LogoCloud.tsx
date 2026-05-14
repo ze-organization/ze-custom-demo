@@ -199,3 +199,6 @@ export const WithLabels = ({ fields, params, page }: LogoCloudProps): JSX.Elemen
     </div>
   );
 };
+
+/* GlobalPayments demo variant — layout via theme tokens; extend for pixel tweaks */
+export const GlobalPayments = Default;

@@ -1,0 +1,116 @@
+# Client Brand Theme — Global Payments
+# Extracted from live site (Playwright) + full-page screenshot review.
+
+client:
+  name: "Global Payments"
+  sourceUrl: "https://www.globalpayments.com/"
+  extractedAt: "2026-05-14T12:00:00Z"
+  extractedBy: "sitecore-build-demo"
+
+colors:
+  primary: "#262aff"
+  primaryForeground: "#ffffff"
+  secondary: "#0033a0"
+  secondaryForeground: "#ffffff"
+  accent: "#262aff"
+  accentForeground: "#ffffff"
+  background: "#ffffff"
+  foreground: "#0a0a0a"
+  muted: "#e8f4fc"
+  mutedForeground: "#1e3a5f"
+  headerBackground: "#ffffff"
+  headerForeground: "#0a0a0a"
+  footerBackground: "#0a0a0a"
+  footerForeground: "#e5e7eb"
+  border: "#e2e8f0"
+  ring: "#262aff"
+  extra:
+    - { name: "statPanel", value: "#0033a0" }
+    - { name: "statPanelForeground", value: "#ffffff" }
+
+typography:
+  headingFamily: "'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+  headingWeight: "700"
+  bodyFamily: "'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+  bodyWeight: "400"
+  monoFamily: "ui-monospace, SFMono-Regular, Menlo, monospace"
+  googleFontsUrl: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+  scale:
+    hero: "clamp(2.25rem, 4vw, 4.125rem)"
+    h1: "2.5rem"
+    h2: "2rem"
+    h3: "1.125rem"
+    body: "1.125rem"
+    small: "0.875rem"
+  headingTransform: "none"
+  letterSpacing: "normal"
+  lineHeight: "normal"
+
+spacing:
+  density: "comfortable"
+  sectionGap: "4.5rem"
+  containerMaxWidth: "1344px"
+  containerPadding: "1.5rem"
+
+shape:
+  borderRadius: "1rem"
+  buttonRadius: "50px"
+  cardRadius: "1rem"
+  imageRadius: "1rem"
+  shadowStyle: "soft"
+  borderStyle: "hairline"
+
+tone:
+  overall: "enterprise-fintech"
+  colorMode: "light"
+  contrast: "high"
+  imagery: "photography-and-product"
+  heroStyle: "centered-overlay"
+  cardStyle: "bordered"
+  navStyle: "solid-bar"
+
+tailwind:
+  colors:
+    brand:
+      primary: "#262aff"
+      secondary: "#0033a0"
+      accent: "#262aff"
+  fontFamily:
+    heading: ["Inter", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"]
+    body: ["Inter", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"]
+  borderRadius:
+    DEFAULT: "1rem"
+    button: "9999px"
+    card: "1rem"
+
+cssVariables: |
+  :root {
+    --brand-primary: #262aff;
+    --brand-primary-foreground: #ffffff;
+    --brand-accent: #262aff;
+    --brand-accent-foreground: #ffffff;
+    --brand-dark: #0033a0;
+    --brand-dark-foreground: #ffffff;
+    --brand-bg: #ffffff;
+    --brand-fg: #0a0a0a;
+    --brand-muted: #e8f4fc;
+    --brand-muted-foreground: #1e3a5f;
+    --brand-border: #e2e8f0;
+    --brand-header-bg: #ffffff;
+    --brand-header-fg: #0a0a0a;
+    --brand-footer-bg: #0a0a0a;
+    --brand-footer-fg: #9ca3af;
+    --brand-heading-font: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --brand-body-font: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --brand-button-radius: 9999px;
+    --brand-card-radius: 1rem;
+  }
+
+extraction:
+  confidence: "high"
+  method: "playwright-full"
+  notes:
+    - "Primary CTA and link color sampled from computed styles (rgb(38, 42, 255))."
+    - "GPCommerce is the live webfont; Inter is substituted for Google Fonts delivery in Phase 4."
+    - "Screenshot review adds royal-navy stat band (#0033a0) and light-blue section tints common on marketing pages."
+    - "Live DOM reported img border-radius 0px; demo theme uses rounded media to match visible marketing comps."

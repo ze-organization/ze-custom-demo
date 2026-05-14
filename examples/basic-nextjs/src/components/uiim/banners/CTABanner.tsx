@@ -246,3 +246,6 @@ export const Minimal = ({ fields, params, page }: CTABannerProps): JSX.Element =
     </div>
   );
 };
+
+/* GlobalPayments demo variant — layout via theme tokens; extend for pixel tweaks */
+export const GlobalPayments = Default;

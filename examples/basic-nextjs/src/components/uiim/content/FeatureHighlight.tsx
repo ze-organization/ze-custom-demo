@@ -10,18 +10,35 @@ import {
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from 'lib/component-props';
 import { cn } from '@/lib/utils';
+import { VideoOrPosterMedia } from '@/components/uiim/media/video-or-poster-media';
 
 interface FeatureHighlightFields {
   EyebrowText: Field<string>;
   Title: Field<string>;
   Description: Field<string>;
   FeatureImage: ImageField;
+  /** Direct file URL (e.g. Content Hub MP4) for HTML5 `<video>` */
+  VideoSourceUrl?: Field<string>;
+  /** Allowed iframe embed (Vidyard, YouTube /embed/, Vimeo player) */
+  VideoEmbedUrl?: Field<string>;
   PrimaryLink: LinkField;
 }
 
 type FeatureHighlightProps = ComponentProps & {
   fields: FeatureHighlightFields;
 };
+
+function videoParamOverrides(rendering: FeatureHighlightProps['rendering']): {
+  videoSourceUrlParam?: string;
+  videoEmbedUrlParam?: string;
+} {
+  const raw = rendering?.params as Record<string, string | undefined> | undefined;
+  if (!raw) return {};
+  return {
+    videoSourceUrlParam: raw.VideoSourceUrl || raw.videoSourceUrl,
+    videoEmbedUrlParam: raw.VideoEmbedUrl || raw.videoEmbedUrl,
+  };
+}
 
 const FeatureHighlightDefaultComponent = (): JSX.Element => (
   <div className="component feature-highlight">
@@ -60,10 +77,11 @@ const CtaButton = ({ field, isEditing }: { field: LinkField; isEditing?: boolean
 /* ────────────────────────────────────────────
    Default — image right, text left (alternates via CSS)
    ──────────────────────────────────────────── */
-export const Default = ({ fields, params, page }: FeatureHighlightProps): JSX.Element => {
+export const Default = ({ fields, params, page, rendering }: FeatureHighlightProps): JSX.Element => {
   const { styles, RenderingIdentifier } = params;
   const isEditing = page?.mode?.isEditing;
   if (!fields) return <FeatureHighlightDefaultComponent />;
+  const vParams = videoParamOverrides(rendering);
 
   return (
     <div className={cn('component feature-highlight', styles)} id={RenderingIdentifier}>
@@ -92,12 +110,15 @@ export const Default = ({ fields, params, page }: FeatureHighlightProps): JSX.El
             <CtaButton field={fields.PrimaryLink} isEditing={isEditing} />
           </div>
           <div className="overflow-hidden rounded-[var(--brand-card-radius,0.75rem)]">
-            {(fields.FeatureImage?.value?.src || isEditing) && (
-              <ContentSdkImage
-                field={fields.FeatureImage}
-                className="h-full w-full object-cover"
-              />
-            )}
+            <VideoOrPosterMedia
+              videoSourceUrl={fields.VideoSourceUrl}
+              videoEmbedUrl={fields.VideoEmbedUrl}
+              videoSourceUrlParam={vParams.videoSourceUrlParam}
+              videoEmbedUrlParam={vParams.videoEmbedUrlParam}
+              imageField={fields.FeatureImage}
+              isEditing={isEditing}
+              mediaClassName="aspect-video min-h-[240px] w-full object-cover [&:is(iframe)]:min-h-[320px] [&:is(iframe)]:border-0"
+            />
           </div>
         </div>
       </section>
@@ -108,10 +129,11 @@ export const Default = ({ fields, params, page }: FeatureHighlightProps): JSX.El
 /* ────────────────────────────────────────────
    Centered — centered text above, image below
    ──────────────────────────────────────────── */
-export const Centered = ({ fields, params, page }: FeatureHighlightProps): JSX.Element => {
+export const Centered = ({ fields, params, page, rendering }: FeatureHighlightProps): JSX.Element => {
   const { styles, RenderingIdentifier } = params;
   const isEditing = page?.mode?.isEditing;
   if (!fields) return <FeatureHighlightDefaultComponent />;
+  const vParams = videoParamOverrides(rendering);
 
   return (
     <div className={cn('component feature-highlight', styles)} id={RenderingIdentifier}>
@@ -139,14 +161,17 @@ export const Centered = ({ fields, params, page }: FeatureHighlightProps): JSX.E
             )}
             <CtaButton field={fields.PrimaryLink} isEditing={isEditing} />
           </div>
-          {(fields.FeatureImage?.value?.src || isEditing) && (
-            <div className="mt-10 overflow-hidden rounded-[var(--brand-card-radius,0.75rem)]">
-              <ContentSdkImage
-                field={fields.FeatureImage}
-                className="w-full object-cover"
-              />
-            </div>
-          )}
+          <div className="mt-10 overflow-hidden rounded-[var(--brand-card-radius,0.75rem)]">
+            <VideoOrPosterMedia
+              videoSourceUrl={fields.VideoSourceUrl}
+              videoEmbedUrl={fields.VideoEmbedUrl}
+              videoSourceUrlParam={vParams.videoSourceUrlParam}
+              videoEmbedUrlParam={vParams.videoEmbedUrlParam}
+              imageField={fields.FeatureImage}
+              isEditing={isEditing}
+              mediaClassName="aspect-video w-full object-cover [&:is(iframe)]:min-h-[360px] [&:is(iframe)]:border-0"
+            />
+          </div>
         </div>
       </section>
     </div>
@@ -156,10 +181,17 @@ export const Centered = ({ fields, params, page }: FeatureHighlightProps): JSX.E
 /* ────────────────────────────────────────────
    WithVideo — same as Default but with play button overlay
    ──────────────────────────────────────────── */
-export const WithVideo = ({ fields, params, page }: FeatureHighlightProps): JSX.Element => {
+export const WithVideo = ({ fields, params, page, rendering }: FeatureHighlightProps): JSX.Element => {
   const { styles, RenderingIdentifier } = params;
   const isEditing = page?.mode?.isEditing;
   if (!fields) return <FeatureHighlightDefaultComponent />;
+  const vParams = videoParamOverrides(rendering);
+  const hasConfiguredVideo = Boolean(
+    fields.VideoEmbedUrl?.value?.trim() ||
+      fields.VideoSourceUrl?.value?.trim() ||
+      vParams.videoEmbedUrlParam?.trim() ||
+      vParams.videoSourceUrlParam?.trim()
+  );
 
   return (
     <div className={cn('component feature-highlight', styles)} id={RenderingIdentifier}>
@@ -188,27 +220,32 @@ export const WithVideo = ({ fields, params, page }: FeatureHighlightProps): JSX.
             <CtaButton field={fields.PrimaryLink} isEditing={isEditing} />
           </div>
           <div className="relative overflow-hidden rounded-[var(--brand-card-radius,0.75rem)]">
-            {(fields.FeatureImage?.value?.src || isEditing) && (
-              <ContentSdkImage
-                field={fields.FeatureImage}
-                className="h-full w-full object-cover"
-              />
-            )}
-            <div className="absolute inset-0 flex items-center justify-center bg-black/20">
-              <div
-                className="flex h-16 w-16 items-center justify-center rounded-full opacity-90"
-                style={{ backgroundColor: 'var(--brand-primary)' }}
-              >
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="var(--brand-primary-foreground, #fff)"
+            <VideoOrPosterMedia
+              videoSourceUrl={fields.VideoSourceUrl}
+              videoEmbedUrl={fields.VideoEmbedUrl}
+              videoSourceUrlParam={vParams.videoSourceUrlParam}
+              videoEmbedUrlParam={vParams.videoEmbedUrlParam}
+              imageField={fields.FeatureImage}
+              isEditing={isEditing}
+              mediaClassName="aspect-video min-h-[240px] w-full object-cover [&:is(iframe)]:min-h-[320px] [&:is(iframe)]:border-0"
+            />
+            {!hasConfiguredVideo && (fields.FeatureImage?.value?.src || isEditing) && (
+              <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/20">
+                <div
+                  className="flex h-16 w-16 items-center justify-center rounded-full opacity-90"
+                  style={{ backgroundColor: 'var(--brand-primary)' }}
                 >
-                  <polygon points="6,3 20,12 6,21" />
-                </svg>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="var(--brand-primary-foreground, #fff)"
+                  >
+                    <polygon points="6,3 20,12 6,21" />
+                  </svg>
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
       </section>
@@ -269,3 +306,6 @@ export const IconLeft = ({ fields, params, page }: FeatureHighlightProps): JSX.E
     </div>
   );
 };
+
+/* GlobalPayments demo variant — layout via theme tokens; extend for pixel tweaks */
+export const GlobalPayments = Default;
