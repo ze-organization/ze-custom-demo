@@ -1,0 +1,37 @@
+﻿---
+ID: "f3fa2ddc-1dd4-4131-85af-550feac5f716"
+Parent: "e94da9f2-19a0-4eeb-9f1c-c5b53df8d8ed"
+Template: "d74f19b9-2239-4f05-8b2f-727393777ed8"
+Path: "/sitecore/content/main/main-website/Data/RichTextBlocks/Global Payments - Be Ready Narrative"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1e23eeda-e14c-429f-8ca5-4f1d3de10949"
+      Hint: Body
+      Value: "<p>Anything is possible with a partner that's already on it.</p><ul><li>Stay ahead with agile technology that anticipates and adapts to your ever-changing needs.</li><li>Get help every step of the way from a team of experts who are available wherever you are, whenever you need them.</li><li>Scale up with the resources and connections of a Fortune 500 company.</li></ul><p>Don't just keep up with the pace of change — take the lead with Global Payments by your side.</p>"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260514T185848Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "8a1bde30-c1a6-4eb1-b30a-c9202cd3980a"
+      Hint: Title
+      Value: Be ready for what's next
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4ed6de3a-d05a-4b27-8387-90b5fb53a41c"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260514T185935Z

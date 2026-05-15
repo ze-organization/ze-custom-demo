@@ -1,0 +1,48 @@
+﻿---
+ID: "52ef39f2-7ef6-407b-a62e-6091f88d16d1"
+Parent: "79a9dfe3-d529-4ed3-8105-dca4c0a3b25c"
+Template: "ebb89bff-86ff-496d-b4f7-57fe722342b6"
+Path: "/sitecore/content/main/main-website/Data/HeroBanners/Global Payments - Hero Banner"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260514T183859Z
+    - ID: "2c186372-9b86-4940-b496-6ae5b5bdac3a"
+      Hint: Subtitle
+      Value: <p>Built for any business — across retail, restaurants and more.</p>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "61c5bc1a-453d-4416-8e01-b150cdcfa7b1"
+      Hint: PrimaryLink
+      Value: |
+        <link text="Get pricing" anchor="" linktype="external" class="" title="" target="" querystring="" url="https://www.globalpayments.com/modals/signup-homepage?theme=split-base-white-theme&amp;type=fullscreen" />
+    - ID: "729698a6-1380-45b1-b348-a464e5f9825a"
+      Hint: HeroImage
+      Value: |
+        <Image src="https://ffde.sitecoresandbox.cloud/api/public/content/1019fb8f6bdd4a82b4adbdcebc055166?v=ba6b9d68" dam-id="i18V2csFQeay7uSOj769Zw" width="1675" height="510" alt="image_white_space_removed.png" dam-content-type="Image" thumbnailsrc="https://ffde.sitecoresandbox.cloud/api/gateway/90295/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4b354ec4-6756-4cb8-8acf-70e9dfc748ef"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "c61c7b75-21bd-4b9c-995e-671c9605de14"
+      Hint: Title
+      Value: Take payments anytime, anywhere with payment solutions designed for your business.
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260514T212008Z

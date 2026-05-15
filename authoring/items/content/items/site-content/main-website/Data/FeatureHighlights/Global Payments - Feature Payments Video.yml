@@ -1,0 +1,54 @@
+﻿---
+ID: "31e172ed-20f9-4237-b7ad-f10c72517fbc"
+Parent: "0a212e28-4ede-45de-8a8f-e1004e8aad25"
+Template: "73a389ee-482a-4974-b4cf-76996b15a5f3"
+Path: "/sitecore/content/main/main-website/Data/FeatureHighlights/Global Payments - Feature Payments Video"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260514T185846Z
+    - ID: "3e0cc0d3-5d90-4b6a-b1b5-d9c61a5bb994"
+      Hint: PrimaryLink
+      Value: |
+        <link text="Explore our payment solutions" anchor="" linktype="external" class="" title="" target="" querystring="" url="https://www.globalpayments.com/payments" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "801e9d29-fa73-4b5a-8cde-04cde87dae6a"
+      Hint: Title
+      Value: Payment solutions that fuel more connection
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "70c90c85-17dd-4da0-adb2-2ce89c776423"
+    - ID: "a6546f1c-d76a-4e24-990d-46e3d464c491"
+      Hint: Description
+      Value: <p>Explore our payment solutions and see how we help businesses connect with customers everywhere.</p>
+    - ID: "aefd22cc-1d3e-4f53-a7f3-d30ccf7030af"
+      Hint: FeatureImage
+      Value: |
+        <Image src="https://ffde.sitecoresandbox.cloud/api/public/content/89887-section3-img4?v=bc7f6733" dam-id="lPscpxcbT-O6DMrFzavT1w" width="864" height="624" alt="section3-img4.png" dam-content-type="Image" thumbnailsrc="https://ffde.sitecoresandbox.cloud/api/gateway/89887/thumbnail" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "c90d4a88-0f12-4f8e-a0b1-2e3f4a5b6c7d"
+      Hint: VideoSourceUrl
+      Value: "https://ffde.sitecoresandbox.cloud/api/public/content/6275e92a074b4dee9d590bcd6a5a0e9d?v=263e959f"
+    - ID: "c90d4a88-0f12-4f8e-a0b2-2e3f4a5b6c7d"
+      Hint: VideoEmbedUrl
+      Value: "https://ffde.sitecoresandbox.cloud/api/public/content/6275e92a074b4dee9d590bcd6a5a0e9d?v=263e959f"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260515T175449Z

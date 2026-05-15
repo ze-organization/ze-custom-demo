@@ -1,0 +1,50 @@
+﻿---
+ID: "e7a08265-257e-4de4-a781-2fa264b90507"
+Parent: "98392731-3cbc-498c-888b-9669ba639b96"
+Template: "2ca92b60-d88f-428e-a222-8a601c3d99de"
+Path: "/sitecore/content/main/main-website/Data/ImageGalleries/Global Payments - Brand Story Poster"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260514T185850Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "6b47bf6f-515b-4592-8ed9-36f56d9c8ed7"
+      Hint: AltText
+      Value: Global Payments brand story video poster
+    - ID: "6dc4a21c-5e28-4eb3-899b-e908c89b23f9"
+      Hint: Caption
+      Value: Watch our story
+    - ID: "8c1ef2bd-babb-44f1-a4c6-fba3dd5be0e0"
+      Hint: GalleryImage
+      Value: |
+        <Image src="https://ffde.sitecoresandbox.cloud/api/public/content/89976-section8-img13?v=e983a599" dam-id="SJvE-KuIRamBzexVIeIUOg" width="1280" height="720" alt="section8-img13.jpg" dam-content-type="Image" thumbnailsrc="https://ffde.sitecoresandbox.cloud/api/gateway/89976/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a60441d1-9526-4fb6-b613-ff4dce425008"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "d91e5b99-1f23-409f-b1c3-3f4a5b6c7d8e"
+      Hint: VideoSourceUrl
+      Value: "https://play.vidyard.com/uqNM9S3vTnMUQwK5yt6UXM?disable_popouts=1&v=4.3.20&type=inline"
+    - ID: "d91e5b99-1f23-409f-b1c4-3f4a5b6c7d8e"
+      Hint: VideoEmbedUrl
+      Value: "https://play.vidyard.com/uqNM9S3vTnMUQwK5yt6UXM?disable_popouts=1&v=4.3.20&type=inline"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260515T181845Z

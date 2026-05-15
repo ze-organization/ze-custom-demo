@@ -1,0 +1,45 @@
+﻿---
+ID: "0631c61e-5e62-460c-ac46-337370a1eb18"
+Parent: "df419eca-b70b-4b36-bd29-69212edd12d1"
+Template: "18975833-7fd9-4ca6-a4dc-d01cd3454d4b"
+Path: "/sitecore/content/main/main-website/Data/ValuePropositionGrids/Global Payments - Industries Grid/Global Payments - Industry Education"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260514T185916Z
+    - ID: "26ad50f0-0c17-4313-b9ca-58fb93ce4b30"
+      Hint: ItemTitle
+      Value: Education
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "5eced858-efa9-446c-abae-a6601bd461a5"
+      Hint: ItemIcon
+      Value: |
+        <Image src="https://ffde.sitecoresandbox.cloud/api/public/content/90049-section11-img19?v=6bfb6394" dam-id="4NaBJqXWTBise8mDDT8U1A" width="648" height="369" alt="A grid of black and white icons consisting of: a coffee cup with a croissant, an airplane, a tooth, a t-shirt, a building, a trio of beauty items, a running shoe, a slice of pizza, a lotus flower, a graduation cap, a faucet with a water droplet, a desk bell." dam-content-type="Image" thumbnailsrc="https://ffde.sitecoresandbox.cloud/api/gateway/90049/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f3937847-52c4-4848-9967-27bb8fdc6514"
+    - ID: "8ebe27d8-08f6-4da3-bc0c-036f1c1bf9d8"
+      Hint: ItemLink
+      Value: |
+        <link text="See how we do it" anchor="" linktype="external" class="" title="" target="" querystring="" url="https://www.globalpayments.com/industries/k-12-education" />
+    - ID: "bab8dbd7-750d-473a-bf6a-e719cf812dd5"
+      Hint: ItemDescription
+      Value: <p>Campus commerce and administration.</p>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260514T191614Z

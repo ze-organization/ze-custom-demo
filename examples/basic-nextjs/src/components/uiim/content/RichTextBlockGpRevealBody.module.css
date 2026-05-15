@@ -1,0 +1,74 @@
+/**
+ * Scroll-linked word color reveal for GlobalPayments RichTextBlock.
+ * Primary: @keyframes gpRevealColor + animation-timeline: view().
+ * Fallback: @supports not (animation-timeline: view()) + .is-revealed from IntersectionObserver.
+ */
+
+.scope :global(.gp-reveal-root) {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-block: clamp(80px, 12vw, 160px);
+  padding-inline: 24px;
+  background: #ffffff;
+  color: #b8bcc2;
+}
+
+.scope :global(.gp-reveal-root p),
+.scope :global(.gp-reveal-root li) {
+  font-weight: 500;
+  font-size: clamp(28px, 4vw, 52px);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  color: #b8bcc2;
+}
+
+.scope :global(.gp-reveal-root ul),
+.scope :global(.gp-reveal-root ol) {
+  font-weight: 500;
+  font-size: clamp(28px, 4vw, 52px);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  color: #b8bcc2;
+}
+
+.scope :global(.gp-reveal-root a) {
+  color: #1c6bff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.scope :global(.gp-reveal-word) {
+  display: inline-block;
+  color: #b8bcc2;
+  transition: color 0.3s ease;
+  animation: gpRevealColor linear both;
+  animation-timeline: view();
+  animation-range: cover 15% cover 55%;
+}
+
+@keyframes gpRevealColor {
+  from {
+    color: #b8bcc2;
+  }
+  to {
+    color: #1c6bff;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scope :global(.gp-reveal-word) {
+    animation: none;
+    color: #1c6bff;
+  }
+}
+
+@supports not (animation-timeline: view()) {
+  .scope :global(.gp-reveal-word) {
+    animation: none;
+    color: #b8bcc2;
+  }
+
+  .scope :global(.gp-reveal-word.is-revealed) {
+    color: #1c6bff;
+  }
+}

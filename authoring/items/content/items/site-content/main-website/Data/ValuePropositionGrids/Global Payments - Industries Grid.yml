@@ -1,0 +1,37 @@
+﻿---
+ID: "df419eca-b70b-4b36-bd29-69212edd12d1"
+Parent: "be69f95d-9d08-4c4b-adf3-59007b2e0bb4"
+Template: "c0e69319-ce82-4a4a-b23c-f291a306f7be"
+Path: "/sitecore/content/main/main-website/Data/ValuePropositionGrids/Global Payments - Industries Grid"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260514T185858Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e810c3b4-9e9f-4328-bb35-4ff80742deab"
+    - ID: "98e43e53-fff0-4ef4-8241-fad86ed9e152"
+      Hint: Description
+      Value: <p>No matter your vertical, we make it our business to understand yours. From coffee shops and college campuses to complex corporations, we design our payments and software solutions to anticipate your business needs.</p>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "d358f6d4-7ec5-48c5-8399-86fce2027f79"
+      Hint: Title
+      Value: Tailored to your industry.
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260514T185952Z

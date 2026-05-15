@@ -5,7 +5,9 @@ import {
   Text,
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from 'lib/component-props';
+import { wrapWordsForGpReveal } from '@/lib/rich-text-gp-reveal';
 import { cn } from '@/lib/utils';
+import { RichTextBlockGpRevealBody } from './RichTextBlockGpRevealBody';
 
 interface RichTextBlockFields {
   Title: Field<string>;
@@ -133,8 +135,10 @@ export const Narrow = ({ fields, params, page }: RichTextBlockProps): JSX.Elemen
 };
 
 /* ────────────────────────────────────────────
-   GlobalPayments — typography + layout aligned to globalpayments.com
-   (theme scale: body 1.125rem / 1.625 lh, h2 2rem; value-prop band when title empty)
+   GlobalPayments — scroll-linked word reveal on body (globalpayments.com hero tagline pattern).
+   Primary: CSS scroll-driven animation on .gp-reveal-word; fallback: IO + .is-revealed in
+   RichTextBlockGpRevealBody.module.css @supports. Title unchanged; Body uses SDK RichText in
+   editing mode only so Experience Editor stays wired to the field.
    ──────────────────────────────────────────── */
 export const GlobalPayments = ({ fields, params, page }: RichTextBlockProps): JSX.Element => {
   const { styles, RenderingIdentifier } = params;
@@ -143,6 +147,8 @@ export const GlobalPayments = ({ fields, params, page }: RichTextBlockProps): JS
 
   const titleText = fields.Title?.value?.trim();
   const isValuePropBand = !titleText && Boolean(fields.Body?.value || isEditing);
+  const bodyValue = fields.Body?.value ?? '';
+  const revealHtml = !isEditing && bodyValue ? wrapWordsForGpReveal(bodyValue) : '';
 
   return (
     <div className={cn('component rich-text-block', styles)} id={RenderingIdentifier}>
@@ -165,7 +171,7 @@ export const GlobalPayments = ({ fields, params, page }: RichTextBlockProps): JS
               className="mb-6 text-[2rem] font-bold leading-[1.2] tracking-[-0.02em] text-[var(--brand-fg,#0a0a0a)] md:text-[2.25rem] md:leading-[1.15] font-[var(--brand-heading-font,inherit)]"
             />
           )}
-          {(fields.Body?.value || isEditing) && (
+          {isEditing && (
             <ContentSdkRichText
               field={fields.Body}
               className={cn(
@@ -181,6 +187,7 @@ export const GlobalPayments = ({ fields, params, page }: RichTextBlockProps): JS
               )}
             />
           )}
+          {!isEditing && revealHtml && <RichTextBlockGpRevealBody html={revealHtml} />}
         </div>
       </section>
     </div>

@@ -1,0 +1,40 @@
+﻿---
+ID: "7259ea8c-c344-4858-860b-c97e5fd69341"
+Parent: "55330769-2e5d-4840-a1bb-67287433745d"
+Template: "d7a407de-322f-432e-8d2c-4f46d11835b1"
+Path: "/sitecore/content/main/main-website/Data/TrustStatsRows/Global Payments - Trust Stats/Global Payments - Stat Transactions"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260514T185904Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "6ad625f0-b625-4601-8e26-1f5ef2fc67a5"
+      Hint: StatDescription
+      Value: <p>Processed annually across our network.</p>
+    - ID: "7695364f-149f-49c0-b08a-4a8ee6c1b9d1"
+      Hint: StatLabel
+      Value: transactions per year
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "6ded80a2-8f98-4266-9942-567c5c8a69a1"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "c477d979-2d2d-4aff-bccc-aa8b1783a8d7"
+      Hint: StatValue
+      Value: 73 billion
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260514T185943Z

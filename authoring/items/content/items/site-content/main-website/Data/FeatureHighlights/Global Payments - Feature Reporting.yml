@@ -1,0 +1,48 @@
+﻿---
+ID: "cd817101-bdfb-4be5-97e6-68fd749267ec"
+Parent: "0a212e28-4ede-45de-8a8f-e1004e8aad25"
+Template: "73a389ee-482a-4974-b4cf-76996b15a5f3"
+Path: "/sitecore/content/main/main-website/Data/FeatureHighlights/Global Payments - Feature Reporting"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260514T185847Z
+    - ID: "3e0cc0d3-5d90-4b6a-b1b5-d9c61a5bb994"
+      Hint: PrimaryLink
+      Value: |
+        <link text="Grow your revenue" anchor="" linktype="external" class="" title="" target="" querystring="" url="https://www.globalpayments.com/business-tools/data-and-reporting" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "5f369cde-7169-4823-bb4a-8c68f68e0c82"
+      Hint: EyebrowText
+      Value: Go beyond payments and take the grind out of growth
+    - ID: "801e9d29-fa73-4b5a-8cde-04cde87dae6a"
+      Hint: Title
+      Value: Make reporting a breeze
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "009dc139-8ae0-4389-a9a0-9170f732cb80"
+    - ID: "a6546f1c-d76a-4e24-990d-46e3d464c491"
+      Hint: Description
+      Value: "<p>Accepting payments is a must, but we know running a business takes more than that. With powerful management and analytics tools, we've got what it takes to fuel your success today and tomorrow.</p><p>Want to transform your payment data into smarter decisions and turn prospects into regulars? We can help.</p>"
+    - ID: "aefd22cc-1d3e-4f53-a7f3-d30ccf7030af"
+      Hint: FeatureImage
+      Value: |
+        <Image src="https://ffde.sitecoresandbox.cloud/api/public/content/90057-section13-img20?v=20bf02c0" dam-id="7ovTm5DARKmCg7ocRnrwww" width="1520" height="1217" alt="A man in a hair salon holds and points to a tablet while a female wearing an apron and holding a mobile device looks at the tablet with him." dam-content-type="Image" thumbnailsrc="https://ffde.sitecoresandbox.cloud/api/gateway/90057/thumbnail" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260514T191558Z
