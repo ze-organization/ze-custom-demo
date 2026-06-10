@@ -155,12 +155,19 @@ export const Default = ({ fields, params, page }: TestimonialBlockProps): JSX.El
 /* ────────────────────────────────────────────
    Carousel — horizontal scrollable container
    ──────────────────────────────────────────── */
-export const Carousel = ({ fields, params, page }: TestimonialBlockProps): JSX.Element => {
+export const Carousel = (props: TestimonialBlockProps): JSX.Element => {
+  const { fields, params, page } = props;
+  const datasource = fields?.data?.datasource;
+  const items = datasource?.children?.results || [];
+
+  // Coveo home testimonials were saved with Carousel variant — use Coveo multi-card layout.
+  if (items.length >= 2) {
+    return <Coveo {...props} />;
+  }
+
   const { styles, RenderingIdentifier } = params;
   const isEditing = page?.mode?.isEditing;
-  const datasource = fields?.data?.datasource;
   if (!datasource) return <TestimonialBlockDefaultComponent />;
-  const items = datasource.children?.results || [];
 
   return (
     <div className={cn('component testimonial-block', styles)} id={RenderingIdentifier}>

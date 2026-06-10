@@ -409,11 +409,22 @@ export const Coveo = ({ fields, params, page }: FeatureCardsGridProps): JSX.Elem
   );
 };
 
-export const Carousel = ({ fields, params, page }: FeatureCardsGridProps): JSX.Element => {
+export const Carousel = (props: FeatureCardsGridProps): JSX.Element => {
+  const { fields, params, page } = props;
   const { styles, RenderingIdentifier } = params;
   const isEditing = page?.mode?.isEditing;
   const datasource = fields?.data?.datasource;
   const cards = datasource?.children?.results || [];
+  const title = datasource?.title?.jsonValue?.value ?? '';
+
+  // Coveo home sections were sometimes saved with Carousel variant — render Coveo layout instead.
+  if (
+    title.toLowerCase().includes('solution') ||
+    styles?.includes('coveo-dark') ||
+    (!title && cards.length === 4)
+  ) {
+    return <Coveo {...props} />;
+  }
 
   // How many cards visible at once per breakpoint
   const VISIBLE = { sm: 1, md: 2, lg: 4 };

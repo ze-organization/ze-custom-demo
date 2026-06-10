@@ -1,19 +1,16 @@
 ﻿---
-ID: "7f9996f7-e706-4b70-86ac-82eb8b801d0c"
-Parent: "6a826e8e-4ab2-4f62-8605-40430028c64c"
-Template: "88376eb8-a0b7-4ffb-aea1-ad143726cfd3"
-Path: "/sitecore/content/main/main-website/Data/TrustStatsRows/Coveo - Trust Stats"
+ID: "f9a4ac57-f103-43db-b3e3-02ada9dd89c8"
+Parent: "b0d9ad8d-af09-4777-b4fa-d3524d6fd910"
+Template: "bbf97517-1fe5-405b-aae7-5309be26249a"
+Path: "/sitecore/content/main/main-website/Home/Data/Coveo_Testimonials"
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
-    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
-      Hint: __Lock
-      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20260610T010233Z
+      Value: 20260610T024305Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -22,16 +19,16 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\zach.escabedo@sitecore.com
+    - ID: "70398829-0ffa-4e5c-8b7c-0103cf5651c9"
+      Hint: SectionTitle
+      Value: Coveo_Testimonials
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "df5f418b-ff34-42a8-afab-a6fdca35354e"
+      Value: "3b72dcaf-b55a-44bb-a6a8-5f79a78e8c6b"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\zach.escabedo@sitecore.com
-    - ID: "c9f6caf5-6abd-461b-b16c-ac873d4f66b1"
-      Hint: Title
-      Value: 
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260610T024000Z
+      Value: 20260610T024305Z

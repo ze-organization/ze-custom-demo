@@ -1,19 +1,16 @@
 ﻿---
-ID: "7f9996f7-e706-4b70-86ac-82eb8b801d0c"
-Parent: "6a826e8e-4ab2-4f62-8605-40430028c64c"
-Template: "88376eb8-a0b7-4ffb-aea1-ad143726cfd3"
-Path: "/sitecore/content/main/main-website/Data/TrustStatsRows/Coveo - Trust Stats"
+ID: "6f545306-e2cf-4463-b6e9-5f20831087ba"
+Parent: "b0d9ad8d-af09-4777-b4fa-d3524d6fd910"
+Template: "2409d9aa-e711-431d-bec8-7ff278dc4d6b"
+Path: "/sitecore/content/main/main-website/Home/Data/Coveo_Integrations_Logos"
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
-    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
-      Hint: __Lock
-      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20260610T010233Z
+      Value: 20260610T024244Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -24,14 +21,14 @@ Languages:
         sitecore\zach.escabedo@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "df5f418b-ff34-42a8-afab-a6fdca35354e"
+      Value: "71f6e8d6-a349-4bb3-943e-e1f4d1863504"
+    - ID: "9311ca72-528d-4599-9c5f-0c325c1ec183"
+      Hint: Title
+      Value: Coveo_Integrations_Logos
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\zach.escabedo@sitecore.com
-    - ID: "c9f6caf5-6abd-461b-b16c-ac873d4f66b1"
-      Hint: Title
-      Value: 
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260610T024000Z
+      Value: 20260610T024244Z

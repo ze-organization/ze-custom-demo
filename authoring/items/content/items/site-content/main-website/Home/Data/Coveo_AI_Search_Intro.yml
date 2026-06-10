@@ -8,6 +8,9 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "1e23eeda-e14c-429f-8ca5-4f1d3de10949"
+      Hint: Body
+      Value: "<p>Curating individualized, trusted and connected experiences across billions of unique moments used to be a budget buster. Now, Coveo AI makes it possible to drive both superior Generative AI-Search experiences and business outcomes — without trade-offs.</p>"
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260610T010331Z
@@ -21,14 +24,14 @@ Languages:
         sitecore\zach.escabedo@sitecore.com
     - ID: "8a1bde30-c1a6-4eb1-b30a-c9202cd3980a"
       Hint: Title
-      Value: Coveo_AI_Search_Intro
+      Value: "AI-Search that turns your data into relevant, profitable generative experiences"
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "dea170b1-3e1e-4981-b51e-e639e0314e89"
+      Value: "650326a0-ca61-4e9b-8d65-5532fb939601"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\zach.escabedo@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260610T010331Z
+      Value: 20260610T024306Z

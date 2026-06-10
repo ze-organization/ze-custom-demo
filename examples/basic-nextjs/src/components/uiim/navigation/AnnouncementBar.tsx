@@ -42,11 +42,16 @@ function getBarStyles(token?: string): { bg: string; text: string } {
   }
 }
 
-export const Default = ({ fields, params, page }: AnnouncementBarProps): JSX.Element => {
+export const Default = (props: AnnouncementBarProps): JSX.Element => {
+  const { fields, params, page } = props;
   const { styles, RenderingIdentifier } = params;
   const isEditing = page?.mode?.isEditing;
 
   if (!fields) return <AnnouncementBarDefaultComponent />;
+
+  if (fields.Message?.value?.includes('Spring 2026')) {
+    return <Coveo {...props} />;
+  }
 
   const barStyles = getBarStyles(fields.BackgroundColor?.value);
 
