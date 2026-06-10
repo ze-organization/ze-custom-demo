@@ -7,7 +7,7 @@ SharedFields:
 - ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
   Hint: __Thumbnail
   Value: |
-    <image mediaid="{93B5FF47-EA5E-40B7-9D14-4D2D185B402F}" />
+    <image mediaid="{4DF58894-D739-4A9E-A583-2294EDE8EA30}" />
 Languages:
 - Language: en
   Versions:
@@ -15,37 +15,41 @@ Languages:
     Fields:
     - ID: "068d4fa8-7b15-4b86-b38a-9e40a58c548b"
       Hint: ArticleAuthor
-      Value: "{18A183C6-6E69-40F3-A0D9-0973D05C8D3B}"
+      Value: "{B891D7CC-6592-47A1-A73B-28ED2267B6B2}"
     - ID: "1cd91ae6-dbe5-40ef-b819-b1959a8a6903"
       Hint: Title
-      Value: 5 Best Practices for Headless CMS Architecture
+      Value: Why Regression Testing Is Essential When Building a Search Agent
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260519T184704Z
     - ID: "2fecdae7-6f5d-46a8-a9c9-c128dc4f4d0c"
       Hint: ArticlePublicationDate
-      Value: 20260508T000000Z
+      Value: 20260609T000000Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: 5 Best Practices for Headless CMS Architecture
     - ID: "63471bba-943c-4d82-b7bf-d7ec82babbf7"
       Hint: ArticleContent
       Value: |
-        <div class="ck-content"><p>Headless CMS architecture offers tremendous flexibility, but realizing its full potential requires thoughtful planning. Here are five best practices that leading teams follow.</p><h2>1. Design Your Content Model First</h2><p>Before writing a single line of code, invest time in your content model. Define content types, relationships, and field structures that reflect your business domain.</p><h2>2. Embrace API-First Development</h2><p>Treat your CMS APIs as first-class products. Document them thoroughly, version them carefully, and monitor their performance.</p><h2>3. Plan for Preview and Editing</h2><p>Invest in visual preview tools, inline editing capabilities, and workflow management to keep your content team productive.</p><h2>4. Implement Robust Caching</h2><p>Implement multi-layer caching at CDN, application, and API levels to ensure fast page loads and reduce backend load.</p><h2>5. Automate Your Deployment Pipeline</h2><p>Continuous deployment is essential. Automate builds, testing, and deployment so that content and code changes flow smoothly to production.</p></div>
+        <div class="ck-content"><p>Traditional software systems are largely deterministic. Given the same input, they follow the same execution path and produce the same output. Search Agents are fundamentally different.A modern Search Agent is influenced by multiple interacting systems:</p><ul><li>Retrieval and ranking logic</li><li>Prompt engineering</li><li>Agent orchestration</li><li>Large Language Models</li><li>Conversation history and memory</li></ul><p>Each of these components can evolve independently. A seemingly harmless prompt adjustment, retrieval change, or orchestration update can alter behavior in unexpected ways.</p><h2>Building a Search Agent… Iteratively</h2><p>Whether you want it or not, building a Search Agent is a highly iterative and inherently complex process. Along the way, you’ll discover more and more about what the agent should be doing, and what it actually does.Eventually, you’ll reach a version you’re happy with — even though some edge cases still fail.</p><p>But here’s the real challenge:</p><ul><li>How do you address these edge cases when what you’re adjusting is mostly prompting logic, not deterministic code?</li><li>How do you ensure that fixing one broken scenario doesn’t break five others that used to work?</li></ul><p>That’s where regression testing becomes critical.</p><h2>Why LLM-Based Systems Make This Even Harder</h2><p>With a traditional function, running the same input yields the same output every time.</p><p>But with LLMs, the same input rarely produces the exact same output twice. That’s part of the magic—and part of the curse.</p><p>Now imagine chaining multiple non-deterministic LLM calls:</p><ul><li>Each model influences the next</li><li>Small variations compound</li><li>Final outputs can shift unpredictably</li></ul><p>Does the variability add up linearly or exponentially? Without guardrails, you simply don’t know. This is exactly why regression testing is essential.</p><h2>What Regression Testing Is</h2><p>Let’s establish a common definition.</p><p>Regression testing is the practice of re-running previously completed tests after making changes—new features, prompt updates, refactors—to ensure existing behavior still works as expected.</p><h3>Why It Matters</h3><ul><li>Prevents old bugs from resurfacing</li><li>Ensures system stability as logic evolves</li><li>Protects core functionality while enabling fast iteration</li></ul><h3>What It Typically Includes</h3><ul><li>Automated test suites (unit, integration, end-to-end)</li><li>Checks for unexpected failures</li><li>Focus on critical flows and high-risk components</li></ul><h3>When to Run It</h3><ul><li>After any code or prompt change</li><li>Before major releases</li><li>Continuously in CI pipelines</li></ul><h2>The Hard Part: Asserting LLM Output</h2><p>In classical testing, you assert exact equality:</p><p>Simple, deterministic.</p><p>But with LLMs, outputs are non-deterministic, free-form, and semantically rich.So what does “correct” even mean?</p><p>Think of it like algebra:</p><p>Two human experts can answer the same question differently while still being correct.LLM outputs should behave similarly:</p><p>For the same input, the response may not be identical, but it should be semantically equivalent.</p><p>The key shift is that search agents are not evaluated primarily on whether they produce the same answer. They are evaluated on whether they continue to respect the same behavioral constraints. An answer may change. Grounding, elicitation, memory handling, and query decomposition should not.</p><h2>How Do You Decide What’s Semantically Equivalent?</h2><h3>Enter: LLM-as-a-Judge</h3><p>LLM-as-a-Judge uses a language model to evaluate the correctness, similarity, or quality of generated outputs between two versions of a system. It determines whether changes represent an improvement, a regression, or a neutral semantic variation.</p><h3>How It Works</h3><p>You run the same dataset through both:</p><ul><li>The baseline version</li><li>The new candidate version</li></ul></div>
     - ID: "76c93dec-a8a6-4185-9fd9-8247ebfb2dd0"
       Hint: ArticleReadTime
-      Value: 7 min read
+      Value: 8 min read
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "58d5ae92-fa39-4b80-afe8-e32884e0137e"
+      Value: "288c8411-c308-4da6-a9b7-68ce579869f5"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\federico.mujica@sitecore.com
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "bb96e156-f355-4cc6-894b-5e70a45d8f30"
+      Hint: ArticleImage
+      Value: |
+        <Image src="https://ze-dam.sitecoresandbox.cloud/api/public/content/91902-building-a-search-agent-hero?v=cd7b8671" dam-id="EcV4zeOtRWStpcuIlQpiFw" width="1920" height="1080" alt="Why Regression Testing Is Essential When Building a Search Agent" dam-content-type="Image" thumbnailsrc="https://ze-dam.sitecoresandbox.cloud/api/gateway/91902/thumbnail" />
     - ID: "bfa05db5-8ccf-4ba2-b312-21194a8a5d75"
       Hint: ArticleKeyTakeaways
       Value: |
-        <div class="ck-content"><ul><li>Content modeling should precede development</li><li>Treat CMS APIs as first-class products</li><li>Visual preview and editing tools keep authors productive</li><li>Multi-layer caching is critical for performance</li></ul></div>
+        <div class="ck-content"><ul><li>Building a Search Agent… Iteratively</li><li>Why LLM-Based Systems Make This Even Harder</li><li>What Regression Testing Is</li><li>Why It Matters</li><li>What It Typically Includes</li><li>When to Run It</li><li>The Hard Part: Asserting LLM Output</li><li>How Do You Decide What’s Semantically Equivalent?</li><li>Enter: LLM-as-a-Judge</li><li>How It Works</li><li>Key Benefits</li><li>Determining Test Case Inputs</li></ul></div>
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260519T184705Z
+      Value: 20260610T153835Z

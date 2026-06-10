@@ -7,7 +7,7 @@ SharedFields:
 - ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
   Hint: __Thumbnail
   Value: |
-    <image mediaid="{E6309436-03C4-43EA-940C-5243A4591A9D}" />
+    <image mediaid="{AAE4B453-9C9D-4E9F-B753-37A630FF271D}" />
 Languages:
 - Language: en
   Versions:
@@ -15,37 +15,41 @@ Languages:
     Fields:
     - ID: "068d4fa8-7b15-4b86-b38a-9e40a58c548b"
       Hint: ArticleAuthor
-      Value: "{18A183C6-6E69-40F3-A0D9-0973D05C8D3B}"
+      Value: "{0C10059B-D1B8-4098-830C-32BC4DE566D1}"
     - ID: "1cd91ae6-dbe5-40ef-b819-b1959a8a6903"
       Hint: Title
-      Value: "From Monolith to Microservices: A Migration Guide"
+      Value: "Offline Purchases API: Smarter Data for Your AI"
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260519T184810Z
     - ID: "2fecdae7-6f5d-46a8-a9c9-c128dc4f4d0c"
       Hint: ArticlePublicationDate
-      Value: 20260320T000000Z
+      Value: 20260513T000000Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: From Monolith to Microservices A Migration Guide
     - ID: "63471bba-943c-4d82-b7bf-d7ec82babbf7"
       Hint: ArticleContent
       Value: |
-        <div class="ck-content"><p>Migrating from a monolithic architecture to microservices is one of the most significant technical undertakings an organization can face. Done right, it unlocks scalability, team autonomy, and deployment flexibility. Done wrong, it creates distributed complexity without delivering benefits.</p><h2>Assess Before You Migrate</h2><p>Not every monolith needs to become microservices. Evaluate whether your pain points — deployment bottlenecks, scaling limitations, team coordination overhead — genuinely require microservices or can be solved with simpler modularization.</p><h2>The Strangler Fig Pattern</h2><p>The safest migration approach is the strangler fig pattern: gradually extract capabilities from the monolith into independent services while keeping the monolith running. New features are built as services; existing features are migrated incrementally.</p><h2>Domain-Driven Design</h2><p>Use domain-driven design (DDD) to identify bounded contexts — natural service boundaries that align with business capabilities. Services should own their data and communicate through well-defined APIs or events.</p><h2>Operational Readiness</h2><p>Microservices multiply operational complexity. Before migrating, invest in observability (distributed tracing, centralized logging, metrics), container orchestration, service mesh, and automated deployment pipelines.</p><h2>Team Structure Follows Architecture</h2><p>Conway's Law tells us that system architecture mirrors organizational structure. Align teams around services, give them end-to-end ownership, and establish clear contracts between teams.</p></div>
+        <div class="ck-content"><p>Search and product discovery remain key drivers of conversion rate and revenue per visitor. Ensuring these experiences are powered by high-quality signals is critical.</p><p>Not all signals are equal, and offline revenue is a crucial one.</p><p>For many commerce organizations, the data powering their AI reflects only a fraction of how customers actually buy. Online purchase signals flow into models cleanly, but the rest, in-store transactions, EDI orders, and sales-rep-entered purchases- has largely gone uncaptured.</p><p>The result is AI that reflects only a partial view of customer demand, no matter how well-tuned the models are.</p><p>Shoppers move fluidly between channels, browsing online and purchasing in-store, or visiting a physical location before completing a purchase through a procurement system. Delivering relevant experiences across these journeys requires AI.</p><p>And AI is only as good as the data behind it.</p><h2>Untapped Signals in AI Search and Product Discovery</h2><p>Coveo’s customers are complex businesses. They are large omnichannel retailers, B2B distributors, and brands operating across multiple channels. For many of them, offline transactions often represent the majority of revenue.</p><p>In practice, “offline” can mean different things:</p><ul><li>Retail: in-store purchases</li><li>B2B: EDI purchase orders, punchout transactions, or sales rep–entered orders</li></ul><p>These are not edge cases, they are core to how business gets done.</p><p>Yet there’s an untapped layer of signal that could meaningfully boost the performance of AI-powered search and discovery: the offline behavior that most models have never seen. Customers have attempted to fill this gap, but these approaches typically create unnecessary complexity for implementations.</p><p>They’re workarounds rather than solutions.</p><h2>Introducing Offline Purchase Ingestion</h2><p>Coveo Offline Purchase Ingestion, currently in Early Access for CYQ2 2026, is a secure API for sending standardized offline purchase data into Coveo.</p><p>Whether purchases come from in-store POS systems, EDI orders, or ERP-managed transactions, they can be ingested in batches, validated against a standard schema, and made available alongside online purchase data.</p><p>In short, this gives Coveo AI a more complete view of total purchase behavior which helps to improve recommendation accuracy, product popularity signals, and catalog coverage, while driving higher revenue per visitor for omnichannel and B2B customers.</p><h2>What This Unlocks for Your AI</h2><p>Once offline purchases are incorporated into Coveo, they strengthen the signals that power your AI across the platform.</p><p>Better popularity signals across your full catalogWhen AI only sees online transactions, its understanding of demand is inherently partial. Incorporating offline purchases provides a more representative view of product popularity improving rankings and discovery experiences.</p><p>Expanded catalog coverageProducts primarily purchased offline often lack sufficient online signals to be recommended effectively. By including offline purchase data, these products become part of the recommendable catalog —increasing coverage and surfacing previously underrepresented items.</p><p>Stronger cross-sell and upsell insightsOffline transactions reveal which products are purchased together, making Coveo’s AI-powered recommendations and cart strategies more effective across the full range of customer buying behavior.</p><h2>Who This Is For</h2><p>Offline Purchase Ingestion is designed for Coveo Commerce customers who operate significant offline channels alongside their online storefront and can export purchase data from systems such as POS, ERP, or data warehouses.</p><p>Demand is already strong among large retailers and B2B distributors operating across physical stores and other offline channels.</p><p>If a meaningful portion of your revenue flows through channels that haven’t been previously captured, this feature is built for you.</p><p>Speak to your Coveo account team about joining the early access program.</p><ul><li>Intro</li><li>Untapped Signals in AI Search and Product Discovery</li><li>Introducing Offline Purchase Ingestion</li><li>What This Unlocks for Your AI</li><li>Who This Is For</li></ul><h3>Related resources</h3></div>
     - ID: "76c93dec-a8a6-4185-9fd9-8247ebfb2dd0"
       Hint: ArticleReadTime
-      Value: 8 min read
+      Value: 2 min read
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "e58afc9f-87e5-46eb-97c4-0de443a52013"
+      Value: "0362da6d-9013-4559-877e-40f0fa5a8e68"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\federico.mujica@sitecore.com
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "bb96e156-f355-4cc6-894b-5e70a45d8f30"
+      Hint: ArticleImage
+      Value: |
+        <Image src="https://ze-dam.sitecoresandbox.cloud/api/public/content/91933-offline-purchase-ingestion-hero?v=a43ba840" dam-id="c78ZRyChSRi5jGSWLSnOOw" width="1920" height="1080" alt="Offline Purchases API: Smarter Data for Your AI" dam-content-type="Image" thumbnailsrc="https://ze-dam.sitecoresandbox.cloud/api/gateway/91933/thumbnail" />
     - ID: "bfa05db5-8ccf-4ba2-b312-21194a8a5d75"
       Hint: ArticleKeyTakeaways
       Value: |
-        <div class="ck-content"><ul><li>Assess whether microservices truly solve your pain points</li><li>Use the strangler fig pattern for safe, incremental migration</li><li>Domain-driven design defines natural service boundaries</li><li>Invest in operational readiness before migrating</li><li>Align team structure with service boundaries</li></ul></div>
+        <div class="ck-content"><ul><li>Untapped Signals in AI Search and Product Discovery</li><li>Introducing Offline Purchase Ingestion</li><li>What This Unlocks for Your AI</li><li>Who This Is For</li><li>Related resources</li></ul></div>
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260519T184811Z
+      Value: 20260610T153945Z

@@ -55,6 +55,42 @@ function KeyTakeaways({
   );
 }
 
+function CoveoArticleSidebar({
+  field,
+  isEditing,
+}: {
+  field?: RichTextField;
+  isEditing?: boolean;
+}) {
+  if (!field?.value && !isEditing) return null;
+
+  return (
+    <aside
+      className="rounded-xl border p-5 md:sticky md:top-8 md:self-start"
+      style={{
+        borderColor: 'var(--brand-border, #E5E7EB)',
+        backgroundColor: 'var(--brand-bg, #ffffff)',
+      }}
+      data-testid="coveo-article-sidebar"
+    >
+      <h2
+        className="mb-4 text-sm font-semibold uppercase tracking-wide"
+        style={{ color: 'var(--brand-fg, #0E0F12)' }}
+      >
+        Inside this article:
+      </h2>
+      <ContentSdkRichText
+        field={field}
+        className="coveo-article-toc prose prose-sm max-w-none font-[var(--brand-body-font,inherit)] [&_a]:font-medium [&_a]:no-underline [&_a]:hover:underline [&_li]:my-1.5 [&_ul]:list-none [&_ul]:space-y-1 [&_ul]:pl-0"
+        style={{ color: 'var(--brand-muted-fg, #5C6370)' }}
+      />
+    </aside>
+  );
+}
+
+const coveoProseClassName =
+  'coveo-article-prose prose prose-lg max-w-none font-[var(--brand-body-font,inherit)] prose-headings:font-medium prose-headings:tracking-tight prose-h2:mt-12 prose-h2:mb-4 prose-h2:text-2xl prose-h2:md:text-3xl prose-h3:mt-8 prose-h3:mb-3 prose-h3:text-xl prose-p:leading-relaxed prose-p:text-[var(--brand-fg,#0E0F12)] prose-a:font-medium prose-a:no-underline prose-a:hover:underline prose-blockquote:border-l-4 prose-blockquote:border-[var(--brand-accent,#00A5B5)] prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-[var(--brand-muted-fg,#5C6370)] prose-strong:font-semibold prose-strong:text-[var(--brand-fg,#0E0F12)] prose-li:marker:text-[var(--brand-accent,#00A5B5)]';
+
 function AuthorBio({
   author,
   isEditing,
@@ -220,6 +256,60 @@ export const Wide = ({ params, page }: ComponentProps): JSX.Element => {
           </div>
         )}
       </article>
+    </div>
+  );
+};
+
+/* ────────────────────────────────────────────
+   Coveo — blog body: prose column + sticky "Inside this article" sidebar
+   ──────────────────────────────────────────── */
+export const Coveo = ({ params, page }: ComponentProps): JSX.Element => {
+  const { styles, RenderingIdentifier } = params;
+  const isEditing = page?.mode?.isEditing;
+  const routeFields = getRouteFields(page);
+
+  if (!routeFields) return <ArticleBodyDefaultComponent />;
+
+  const { ArticleContent, ArticleKeyTakeaways, ArticleAuthor } = routeFields;
+  const hasSidebar = Boolean(ArticleKeyTakeaways?.value || isEditing);
+
+  return (
+    <div className={cn('component article-body', styles)} id={RenderingIdentifier}>
+      <div
+        className="w-full px-4 py-10 md:py-14"
+        style={{ backgroundColor: 'var(--brand-bg, #ffffff)' }}
+      >
+        <div
+          className={cn(
+            'mx-auto max-w-7xl',
+            hasSidebar ? 'grid gap-10 lg:grid-cols-[minmax(0,1fr)_280px]' : 'max-w-3xl'
+          )}
+        >
+          <article>
+            {(ArticleContent?.value || isEditing) && (
+              <ContentSdkRichText
+                field={ArticleContent}
+                className={coveoProseClassName}
+                style={{ color: 'var(--brand-fg, #0E0F12)' }}
+                data-testid="article-content"
+              />
+            )}
+
+            {(ArticleAuthor?.fields || isEditing) && (
+              <div
+                className="mt-14 border-t pt-10"
+                style={{ borderColor: 'var(--brand-border, #E5E7EB)' }}
+              >
+                <AuthorBio author={ArticleAuthor} isEditing={isEditing} />
+              </div>
+            )}
+          </article>
+
+          {hasSidebar && (
+            <CoveoArticleSidebar field={ArticleKeyTakeaways} isEditing={isEditing} />
+          )}
+        </div>
+      </div>
     </div>
   );
 };

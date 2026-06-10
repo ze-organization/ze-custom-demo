@@ -7,7 +7,7 @@ SharedFields:
 - ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
   Hint: __Thumbnail
   Value: |
-    <image mediaid="{1C2C9AC0-CDE5-4491-A578-11D9172E16AC}" />
+    <image mediaid="{7CC99E40-0647-46E3-AF58-07ADF8EE996E}" />
 Languages:
 - Language: en
   Versions:
@@ -15,37 +15,41 @@ Languages:
     Fields:
     - ID: "068d4fa8-7b15-4b86-b38a-9e40a58c548b"
       Hint: ArticleAuthor
-      Value: "{18A183C6-6E69-40F3-A0D9-0973D05C8D3B}"
+      Value: "{454FD1EC-47C1-4A2C-A8A9-C96CEEE361A9}"
     - ID: "1cd91ae6-dbe5-40ef-b819-b1959a8a6903"
       Hint: Title
-      Value: How AI Is Transforming Content Management
+      Value: What It’s Really Like to Be an IT Helpdesk Specialist at Coveo
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260519T184702Z
     - ID: "2fecdae7-6f5d-46a8-a9c9-c128dc4f4d0c"
       Hint: ArticlePublicationDate
-      Value: 20260512T000000Z
+      Value: 20260507T000000Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: How AI Is Transforming Content Management
     - ID: "63471bba-943c-4d82-b7bf-d7ec82babbf7"
       Hint: ArticleContent
       Value: |
-        <div class="ck-content"><p>Artificial intelligence is reshaping every aspect of content management, from creation and curation to delivery and optimization. Content teams that embrace AI tools are seeing dramatic improvements in productivity and content quality.</p><h2>Automated Content Generation</h2><p>Large language models can now draft blog posts, product descriptions, email copy, and social media updates in seconds. While human oversight remains essential, AI-generated first drafts cut production time significantly.</p><h2>Intelligent Tagging and Taxonomy</h2><p>AI-powered classification automatically tags content with metadata, categories, and sentiment. This makes content discoverable, improves search relevance, and enables more sophisticated personalization.</p><h2>Predictive Content Performance</h2><p>Machine learning models analyze historical engagement data to predict which content will perform best for specific audiences and channels.</p></div>
+        <div class="ck-content"><p>Not all heroes wear capes, but some just need a ticket number and fifteen minutes to save your entire workday. In my opinion, IT teams save lives on a daily basis, or at least, it feels like they do. And that got me thinking: what’s it really like to be the one handling all of this, every single day?</p><p>The answer starts with understanding who’s actually on the other end of that ticket.</p><h2>So What’s Your Typical IT Helpdesk Specialist Like?</h2><p>Think of someone who genuinely enjoys helping others and finds satisfaction in turning a frustrating situation into a solved one. They’re curious by nature, always keeping an eye on new technologies and trends, and they thrive in an environment where no days look the same.</p><p>Of course, the technical side matters too. They are comfortable across Windows and Mac, know their way around Office 365, Google Apps and Zoom and can juggle multiple priorities without losing focus. They also know how to work closely with other Helpdesk Specialists and System Administrators.</p><p>But beyond the technical skills, what really defines a great IT specialist is their attitude. They lead with patience and empathy, communicate clearly under pressure, and always show up with a positive mindset.</p><p>Now that you know who they are, let’s take a look at what their day actually looks like.</p><h2>So What Does an IT Helpdesk Specialist Actually Do?</h2><p>What truly sets this role apart at Coveo is proximity. As an IT Helpdesk Specialist, you’re not supporting anonymous users, you’re supporting your colleagues. You have time to build real relationships with them. You see them every day, you socialize with them at company events and activities, and you learn how they work over time. And here’s the thing, your colleagues are technically savvy. They handle the simple fixes themselves, which means by the time something reaches your queue, it’s usually a problem worth digging into that requires your expertise.</p><p>The tools make the work even more interesting. At Coveo, our IT environment is 100% cloud-based, and we stay curious about new technologies that can help us work smarter. We also make sure our teams have access to the most recent computers, so you’re supporting people with modern tools in a fast-moving environment.</p><p>The work itself is just as engaging. The day typically starts with a scan of the ticket queue, reviewing new requests, making sure everything is properly distributed across the team, and flagging anything urgent that needs immediate attention. You might spend the morning digging into a complex issue that escalated to your desk, drawing on your expertise to find a solution no one else could crack. After lunch, maybe it’s updating documentation for a tricky procedure, or sitting down with a newer team member for a coaching session to help them grow. Late in the day, you might find yourself analyzing your team’s performance data, spotting trends, and putting together reports that help leadership make smarter decisions about how IT support evolves.</p><p>Sound like the kind of work that excites you? We want to meet you. Check our career opportunities here.</p><ul><li>Intro</li><li>So What’s Your Typical IT Helpdesk Specialist Like?</li><li>So What Does an IT Helpdesk Specialist Actually Do?</li></ul><h3>Related resources</h3></div>
     - ID: "76c93dec-a8a6-4185-9fd9-8247ebfb2dd0"
       Hint: ArticleReadTime
-      Value: 5 min read
+      Value: 2 min read
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "fd65540e-db2a-4f4a-b28a-68f06c6c52ad"
+      Value: "e909d8d9-1643-4106-bf39-837ffd9a2189"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\federico.mujica@sitecore.com
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "bb96e156-f355-4cc6-894b-5e70a45d8f30"
+      Hint: ArticleImage
+      Value: |
+        <Image src="https://ze-dam.sitecoresandbox.cloud/api/public/content/91943-it-helpdesk-specialist-hero?v=123ff961" dam-id="HRJhKsdJRV-okmu45A75ZQ" width="1280" height="720" alt="What It’s Really Like to Be an IT Helpdesk Specialist at Coveo" dam-content-type="Image" thumbnailsrc="https://ze-dam.sitecoresandbox.cloud/api/gateway/91943/thumbnail" />
     - ID: "bfa05db5-8ccf-4ba2-b312-21194a8a5d75"
       Hint: ArticleKeyTakeaways
       Value: |
-        <div class="ck-content"><ul><li>AI-generated drafts cut content production time dramatically</li><li>Intelligent tagging improves discoverability and personalization</li><li>Predictive analytics help prioritize high-impact content</li></ul></div>
+        <div class="ck-content"><ul><li>So What’s Your Typical IT Helpdesk Specialist Like?</li><li>So What Does an IT Helpdesk Specialist Actually Do?</li><li>Related resources</li></ul></div>
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260519T184703Z
+      Value: 20260610T153953Z

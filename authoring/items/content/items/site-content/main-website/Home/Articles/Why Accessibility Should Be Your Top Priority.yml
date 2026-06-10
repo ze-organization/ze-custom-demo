@@ -7,7 +7,7 @@ SharedFields:
 - ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
   Hint: __Thumbnail
   Value: |
-    <image mediaid="{8A763F15-156E-4A7D-9C74-0D632BD7CD1B}" />
+    <image mediaid="{C1F9B235-7DA0-4AAF-BC89-9036EFA0B963}" />
 Languages:
 - Language: en
   Versions:
@@ -15,37 +15,41 @@ Languages:
     Fields:
     - ID: "068d4fa8-7b15-4b86-b38a-9e40a58c548b"
       Hint: ArticleAuthor
-      Value: "{18A183C6-6E69-40F3-A0D9-0973D05C8D3B}"
+      Value: "{2916E3F8-C634-489A-9214-A99868FDC41D}"
     - ID: "1cd91ae6-dbe5-40ef-b819-b1959a8a6903"
       Hint: Title
-      Value: Why Accessibility Should Be Your Top Priority
+      Value: "Enterprise Search Has Always Forced a Trade-Off. Conversational Search Ends It."
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260519T184808Z
     - ID: "2fecdae7-6f5d-46a8-a9c9-c128dc4f4d0c"
       Hint: ArticlePublicationDate
-      Value: 20260403T000000Z
+      Value: 20260407T000000Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: Why Accessibility Should Be Your Top Priority
     - ID: "63471bba-943c-4d82-b7bf-d7ec82babbf7"
       Hint: ArticleContent
       Value: |
-        <div class="ck-content"><p>Web accessibility is not just a legal requirement — it is a business opportunity. Over one billion people worldwide live with some form of disability, and accessible websites reach a larger audience, perform better in search, and deliver superior user experiences for everyone.</p><h2>The Business Case</h2><p>Accessible websites see higher conversion rates, lower bounce rates, and improved SEO performance. They also reduce legal risk as accessibility lawsuits continue to rise year over year.</p><h2>WCAG 2.2 Essentials</h2><p>The Web Content Accessibility Guidelines provide a comprehensive framework. Focus on perceivable content (alt text, captions, color contrast), operable interfaces (keyboard navigation, focus management), understandable design (clear labels, error prevention), and robust markup (semantic HTML, ARIA).</p><h2>Shift Left on Accessibility</h2><p>Catching accessibility issues early in the design and development process is far cheaper than retrofitting later. Include accessibility requirements in user stories, design with inclusive patterns, and automate testing in your CI/CD pipeline.</p><h2>Automated and Manual Testing</h2><p>Automated tools catch approximately 30-40% of accessibility issues. Complement them with manual keyboard testing, screen reader testing, and usability testing with people who have disabilities.</p></div>
+        <div class="ck-content"><p>Here’s something worth sitting with: the search bar has always been a negotiation.</p><p>Not between the user and information, but between the user and a system’s limitations. Whether they knew what they needed or not, users had to type the right words. Adjust the syntax to see if that got them to the right results. Ask one thing at a time. Don’t be too vague, but don’t be too conversational. The unspoken contract of enterprise search has always been: you meet us halfway, and we’ll do our best.</p><p>Well, that contract has been broken. And the thing is, users didn’t break it; AI did.</p><h2>The Expectation Has Already Shifted</h2><p>Like the internet (albeit much faster), ChatGPT was a seismic shift in connection. Users stopped accepting the negotiation, and started asking questions the way they actually spoke. These queries — incomplete, contextual, layered — weren’t met with a ‘no results found’ or blue link list. Instead, the technology kept up. Maybe not perfectly, but enough to prove it was possible.</p><p>And that expectation didn’t stay in a personal context. It walks into work on Monday morning. It sits down at the help center, the support portal, the company intranet. And it brings with it a new standard.</p><p>The problem is that most enterprise search wasn’t built for that standard. It was built for a different era; one where users were expected to do the cognitive work the system couldn’t. That era is over, whether enterprise AI has caught up or not.</p><p>Relevant reading: You Can’t Prompt Engineer Your Way Out of a Bad Foundation</p><h2>We’ve Been Measuring the Wrong Thing</h2><p>The information retrieval industry spent years optimizing for relevance. Deliver the right document. Surface the right article. Rank the right result. These are real and meaningful problems, and solving them mattered.</p><p>But relevance isn’t the ceiling anymore. It’s the floor.</p><p>What users actually need isn’t a better-ranked list of documents. They need answers; ones they can trust, ones that make sense given everything they’ve already said in the conversation, ones that don’t require them to start over when they want to go deeper.</p><p>That’s a fundamentally different problem that requires a fundamentally different architecture to solve it.</p><p>Here’s the uncomfortable truth about where most enterprise AI sits right now: organizations have had to choose. Grounded or conversational or summarized. Pick the capability that matters most and accept the gaps that come with it. That’s not a product failure — it’s an architectural one.</p><p>The underlying systems weren’t designed to do all three simultaneously.</p><p>Relevant reading: What’s Stopping Organisations From Trusting Their Own AI?</p><h2>The Wow-Trust Gap Is Real, &amp; It’s Costly</h2><p>There’s a pattern I see play out constantly in enterprise AI deployments. A system looks extraordinary in a demo. The answers are fluent, the interface is clean, the stakeholders are impressed. Then it hits production — real users, real questions, real edge cases — and the cracks appear fast.</p><p>Answers that sound right but aren’t sourced. Responses that lose the thread the moment a user follows up. Confidence without accountability.</p><p>I call this the Wow-Trust Gap, and in enterprise environments it’s particularly damaging. A user who gets a wrong answer from an AI system doesn’t just abandon that interaction — they abandon the system. They call. They escalate. They tell someone the AI “doesn’t work.” The cost isn’t just a bad experience; it’s a regression in the organization’s ability to actually deliver self-service at scale.</p><p>Closing that gap means accepting that conversational capability and trustworthiness aren’t two separate workstreams. They have to be built together, from the ground up, or one will always undermine the other.</p><h2>What “Actually Solved” Looks Like</h2><p>The reason I’m writing this now is that I think we’re at a genuine inflection point — not a marketing one. Coveo’s Conversational Search, powered by what we’re calling the Coveo Search Agent, represents the first time I’ve seen all three capabilities — grounded, summarized, conversational — work together without the trade-off.</p><p>The architecture behind it isn’t a chatbot with a knowledge base bolted on. It’s an orchestration layer that reasons across retrieval steps, maintains memory across a session, and evaluates whether it actually has enough information to answer before it responds. When a user follows up, the system knows what came before. It builds on the conversation rather than resetting it.</p><p>And critically, it’s grounded in the same retrieval foundation that organizations have already validated in production. Customers like SAP and F5 have seen real, measurable outcomes — deflection, self-service success, reduced search friction — using the underlying platform.</p><p>Conversational Search inherits that foundation. The agentic reasoning layer is new; the trust in what it retrieves is not.</p><h2>The Real Question for Digital &amp; CX Leaders</h2><p>Conversational Search powered by Coveo Search Agent opens for beta today, April 7th, 2026 — across help centers, support portals, communities, intranets, wherever your users are actually searching.</p><p>But the technology question, while important, is secondary to a more fundamental one: do you believe users are going to keep raising their expectations, or do you think they’ll settle back into old habits?</p><p>I don’t think they’ll settle. I think the bar keeps moving. And organizations that treat AI-powered search as a feature rather than a foundation are going to keep chasing it.</p><p>The ones that get ahead of it will do so by building for the user they have now — not the user who was willing, a decade ago, to learn how to search.</p><p>Learn more about Conversational Search.</p><p>Eager to discuss how it could work in your organization? Schedule time with one of our search experts.</p><ul><li>Intro</li><li>The Expectation Has Already Shifted</li><li>We’ve Been Measuring the Wrong Thing</li><li>The Wow-Trust Gap Is Real, &amp; It’s Costly</li><li>What “Actually Solved” Looks Like</li><li>The Real Question for Digital &amp; CX Leaders</li></ul><h3>Related resources</h3></div>
     - ID: "76c93dec-a8a6-4185-9fd9-8247ebfb2dd0"
       Hint: ArticleReadTime
-      Value: 6 min read
+      Value: 4 min read
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "0c82e5ab-82d7-4b27-aae9-af30e90021c4"
+      Value: "4af0f173-a4d7-4b53-997d-cac83c8743aa"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\federico.mujica@sitecore.com
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "bb96e156-f355-4cc6-894b-5e70a45d8f30"
+      Hint: ArticleImage
+      Value: |
+        <Image src="https://ze-dam.sitecoresandbox.cloud/api/public/content/91981-coveo-conversational-search-hero?v=12a43aad" dam-id="cOHi3NkySTaJxYO-Ou7wYA" width="1920" height="1080" alt="Enterprise Search Has Always Forced a Trade-Off. Conversational Search Ends It." dam-content-type="Image" thumbnailsrc="https://ze-dam.sitecoresandbox.cloud/api/gateway/91981/thumbnail" />
     - ID: "bfa05db5-8ccf-4ba2-b312-21194a8a5d75"
       Hint: ArticleKeyTakeaways
       Value: |
-        <div class="ck-content"><ul><li>Accessible sites see higher conversion and better SEO</li><li>WCAG 2.2 provides the definitive compliance framework</li><li>Shift left: catch issues early in design and development</li><li>Automated tools catch only 30-40% of issues — manual testing is essential</li></ul></div>
+        <div class="ck-content"><ul><li>The Expectation Has Already Shifted</li><li>We’ve Been Measuring the Wrong Thing</li><li>The Wow-Trust Gap Is Real, &amp; It’s Costly</li><li>What “Actually Solved” Looks Like</li><li>The Real Question for Digital &amp; CX Leaders</li><li>Related resources</li></ul></div>
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260519T184808Z
+      Value: 20260610T154026Z

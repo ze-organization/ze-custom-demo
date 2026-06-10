@@ -59,15 +59,8 @@ Languages:
               s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BFA331FCF-2EFB-4F1F-A2EE-EB30CAFD4AE2%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=6"
               s:ph="headless-main" />
             <r
-              uid="{7DF06708-A269-49DD-BD41-304A9119B306}"
-              p:after="r[@uid='{D3C37A52-CCE2-4482-ABD5-F4DD5EA09D54}']"
-              s:ds="local:/Data/Coveo_Solutions_Grid"
-              s:id="{E194B962-0617-4A10-B4DB-2A4D19248C13}"
-              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BF2C49451-6C21-4004-A70C-B346385D5F5F%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=13"
-              s:ph="headless-main" />
-            <r
               uid="{98092B55-7CBD-4C42-B282-2C94570F342F}"
-              p:after="r[@uid='{7DF06708-A269-49DD-BD41-304A9119B306}']"
+              p:after="r[@uid='{D3C37A52-CCE2-4482-ABD5-F4DD5EA09D54}']"
               s:ds="local:/Data/Coveo_CTA_MCP_Server"
               s:id="{F6A1FA05-15FC-46C9-B921-98E79EFF5F4E}"
               s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B8B80E820-0EBF-486A-A21F-7A0A25BA2E4D%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=7"
@@ -77,7 +70,7 @@ Languages:
               p:after="r[@uid='{98092B55-7CBD-4C42-B282-2C94570F342F}']"
               s:ds="3dad0bdb-6763-4b53-8565-22a9d4b0dfb5"
               s:id="{E194B962-0617-4A10-B4DB-2A4D19248C13}"
-              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BF2C49451-6C21-4004-A70C-B346385D5F5F%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=16"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B532AE16C-098A-429F-9550-B2543177DB58%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=16"
               s:ph="headless-main" />
             <r
               uid="{2D483B58-56E7-4C20-AD8D-839CFDD84149}"
@@ -101,15 +94,8 @@ Languages:
               s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BBC68CA90-2611-492E-93B2-61A187DE39AE%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=12"
               s:ph="headless-main" />
             <r
-              uid="{1404EAF2-452A-4A54-8471-452D24176F71}"
-              p:after="r[@uid='{C10C3D42-D479-46FD-9E2A-CF88556312F6}']"
-              s:ds="local:/Data/Coveo_Testimonials"
-              s:id="{90021266-66B3-47B6-9709-A070F56064A1}"
-              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B0F34A807-A42C-4E7D-BD54-EF222EB2D952%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=15"
-              s:ph="headless-main" />
-            <r
               uid="{D61E7D19-3F40-492D-AA78-658EE1FA0D94}"
-              p:after="r[@uid='{1404EAF2-452A-4A54-8471-452D24176F71}']"
+              p:after="r[@uid='{C10C3D42-D479-46FD-9E2A-CF88556312F6}']"
               s:ds="6e643951-892d-4a9f-9a79-6a9cfad5d0d8"
               s:id="{E194B962-0617-4A10-B4DB-2A4D19248C13}"
               s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B532AE16C-098A-429F-9550-B2543177DB58%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=9"
@@ -149,11 +135,11 @@ Languages:
         sitecore\federico.mujica@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "2783378b-b2b5-40bc-b601-0543e0024180"
+      Value: "bf2c0b56-d6ac-4e47-b895-c032430e25c0"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\zach.escabedo@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260610T024346Z
+      Value: 20260610T031737Z

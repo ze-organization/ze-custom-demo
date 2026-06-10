@@ -1,6 +1,11 @@
 import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import { Default as ArticleHero, Minimal as ArticleHeroMinimal, SplitImage as ArticleHeroSplitImage } from '@/components/uiim/article/ArticleHero';
+import {
+  Default as ArticleHero,
+  Minimal as ArticleHeroMinimal,
+  SplitImage as ArticleHeroSplitImage,
+  Coveo as ArticleHeroCoveo,
+} from '@/components/uiim/article/ArticleHero';
 import {
   defaultProps,
   propsEditing,
@@ -16,6 +21,9 @@ import type { Field } from '@sitecore-content-sdk/nextjs';
 
 // Mock @sitecore-content-sdk/nextjs
 jest.mock('@sitecore-content-sdk/nextjs', () => ({
+  useSitecore: () => ({
+    page: { mode: { isEditing: false } },
+  }),
   Text: ({
     field,
     tag,
@@ -238,6 +246,24 @@ describe('ArticleHero Component', () => {
     it('should handle missing optional fields', () => {
       render(<ArticleHeroSplitImage {...(propsMinimal as unknown as Parameters<typeof ArticleHeroSplitImage>[0])} />);
       expect(screen.getByText('The Future of Web Development')).toBeInTheDocument();
+    });
+  });
+
+  describe('Coveo variant', () => {
+    it('should render title and Coveo share buttons', () => {
+      render(<ArticleHeroCoveo {...(defaultProps as unknown as Parameters<typeof ArticleHeroCoveo>[0])} />);
+      expect(screen.getByText('The Future of Web Development')).toBeInTheDocument();
+      expect(screen.getByTestId('coveo-share-buttons')).toBeInTheDocument();
+    });
+
+    it('should render hero image below content', () => {
+      render(<ArticleHeroCoveo {...(defaultProps as unknown as Parameters<typeof ArticleHeroCoveo>[0])} />);
+      expect(screen.getByTestId('coveo-hero-image')).toBeInTheDocument();
+    });
+
+    it('should render fallback when no route fields', () => {
+      render(<ArticleHeroCoveo {...(propsNoRouteFields as unknown as Parameters<typeof ArticleHeroCoveo>[0])} />);
+      expect(screen.getByText('ArticleHero')).toBeInTheDocument();
     });
   });
 });

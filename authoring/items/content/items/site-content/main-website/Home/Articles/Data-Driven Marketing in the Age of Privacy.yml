@@ -7,7 +7,7 @@ SharedFields:
 - ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
   Hint: __Thumbnail
   Value: |
-    <image mediaid="{A4025185-A261-4484-B1B9-4A63AB17F1FB}" />
+    <image mediaid="{E1297891-0086-4558-B593-22B74D956184}" />
 Languages:
 - Language: en
   Versions:
@@ -15,37 +15,41 @@ Languages:
     Fields:
     - ID: "068d4fa8-7b15-4b86-b38a-9e40a58c548b"
       Hint: ArticleAuthor
-      Value: "{18A183C6-6E69-40F3-A0D9-0973D05C8D3B}"
+      Value: "{5FCE2A06-FAD8-47B4-B28D-E872C74DEB53}"
     - ID: "1cd91ae6-dbe5-40ef-b819-b1959a8a6903"
       Hint: Title
-      Value: "Data-Driven Marketing in the Age of Privacy"
+      Value: "Payloads, Events, State: How Coveo Builds Trusted Data"
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260519T184809Z
     - ID: "2fecdae7-6f5d-46a8-a9c9-c128dc4f4d0c"
       Hint: ArticlePublicationDate
-      Value: 20260327T000000Z
+      Value: 20260521T000000Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: "Data-Driven Marketing in the Age of Privacy"
     - ID: "63471bba-943c-4d82-b7bf-d7ec82babbf7"
       Hint: ArticleContent
       Value: |
-        <div class="ck-content"><p>The deprecation of third-party cookies and the rise of privacy regulations like GDPR and CCPA are forcing marketers to rethink their data strategies. The organizations that adapt fastest will gain a significant competitive advantage.</p><h2>First-Party Data Is the New Gold</h2><p>With third-party data becoming unreliable, first-party data collected directly from your customers is more valuable than ever. Invest in strategies that encourage customers to share their data willingly — loyalty programs, gated content, preference centers, and account creation.</p><h2>Consent Management</h2><p>Transparent consent management builds trust and ensures compliance. Implement clear opt-in mechanisms, make it easy to update preferences, and honor requests promptly. Privacy should be a feature, not a burden.</p><h2>Contextual Targeting Returns</h2><p>As behavioral targeting becomes harder, contextual targeting — placing ads and content based on page context rather than user tracking — is making a comeback with modern AI-powered approaches.</p><h2>Server-Side Analytics</h2><p>Moving analytics collection to the server side improves data accuracy, reduces dependence on client-side cookies, and gives you more control over what data is collected and how it is processed.</p></div>
+        <div class="ck-content"><p>Modern ML systems are often described in terms of models, embeddings, feature stores and training pipelines. In practice however, the scalability and reliability of an ML platform is often determined much earlier in the process: at the moment raw interaction data enters the system.</p><p>At Coveo, nearly every ranking, personalization and commerce optimization capability depends on processing enormous volumes of behavioral signals generated across websites, applications and backend systems. Every search, click, recommendation interaction and purchase contributes data that may later influence machine learning outcomes.</p><p>At first glance, this may sound straightforward: clients send JSON payloads, those payloads are stored, and models train on the resulting data. In reality however, operating a large-scale ML platform across hundreds of integrations quickly becomes much more complicated. Payload formats evolve over time, integrations are difficult to change, and many important business concepts cannot be represented directly as single events.</p><p>To manage this complexity, Coveo deliberately separates three concepts that are often conflated:</p><ul><li>raw payloads received from integrations,</li><li>normalized events representing business semantics,</li><li>and higher-level business state derived from collections of events.</li></ul><p>That distinction may sound subtle, but it is foundational to how our ML and analytics systems operate at scale. As a simple analogy, consider how a bank may process an online purchase through a payment provider:</p><ol><li>Receive a JSON payload from the payment provider:{txid: fe24ae8b12c, amt: 49.55}</li><li>Interpret this payload as a debit event on your account and store it:transaction: -49.55</li><li>Process this event and update the bank’s business data model:account total: 529.76</li></ol><p>The first two steps separate the external payload from the internal event representation. A bank may support many different payment providers or multiple protocol versions, all producing different payload structures. The exact syntax of the incoming JSON is ultimately irrelevant; what matters is preserving the meaning of the transaction in a unified format that downstream systems can understand.</p><p>The final step computes current business state from a collection of events. Banks do not simply apply a transaction to a running total and then discard the transaction record itself. Instead, all transactions are retained for auditability, resiliency and historical analysis, while separate processing systems continuously derive the current account state.</p><p>Coveo’s event processing architecture follows a very similar pattern.</p><h2>Payload Normalization</h2><p>There are a number of practical and architectural reasons for creating a clear separation between the payload received from an integration and the event it represents.</p><h3>Separation of concerns</h3><p>It would be extremely difficult for ML data scientists or downstream analytics systems to keep track of the precise details of multiple integration protocols. A model may simply need the revenue associated with a purchase event, without caring whether the value originates from a field named tr in one protocol or transaction.revenue in another.</p><p>This abstraction is conceptually similar to interfaces in software engineering. The normalized Event definition acts as the stable interface consumed internally, while the payload-specific transformation layer implements the details required to map each external protocol into that interface.</p><p>Without this separation, every downstream system would become tightly coupled to every upstream integration format.</p><h3>Integration inertia</h3><p>The ability to abstract away from exact payload syntax is critical because integrations are difficult to change once deployed.</p><p>Customers are understandably hesitant to modify working Coveo integrations running on production websites. The operational risk is significant: website changes may interfere with day-to-day business operations, ownership is often fragmented across teams, and the benefits of integration updates are not always immediately visible to stakeholders. As a result, once an integration is deployed, changing it becomes an uphill battle.</p><p>By isolating protocol-specific concerns within the normalization layer, internal systems can continue to evolve independently while maintaining backward compatibility with integrations that may remain unchanged for years.</p><h3>Changing event sources</h3><p>As the product evolves, the systems responsible for generating events may also change.</p><p>In older integration protocols, for example, search event payloads needed to be sent explicitly from the client browser after search results were received from the Coveo Search API. In more modern Coveo deployment architectures, the Search API itself may generate and log the corresponding payload automatically.</p><p>This transition was transparent to downstream systems because both implementations ultimately produced the same normalized search event, even though the payload origins and transport mechanisms differed significantly.</p><h3>One payload, multiple events</h3><p>The mapping between payloads and events is not always one-to-one.</p><p>Some legacy endpoints accept arrays of objects within a single payload and expand them into multiple independent events during normalization. Similarly, a commerce purchase payload may contain multiple line items which are more conveniently processed as separate downstream events for attribution or analytics purposes.</p><p>The normalization layer is responsible not only for translating payload formats, but also for reshaping incoming data into forms better suited for downstream processing.</p><h2>Events Versus State</h2><p>Returning to the banking analogy, it should be obvious why banks do not discard transaction records after updating an account balance. Customers need to understand how the current balance was produced, and the bank must be able to audit or reconstruct account history if necessary.</p><p>At the same time, it would also be impractical for a bank to recompute your account balance from the full transaction history every time you open your banking application.</p><p>The same distinction exists within Coveo: events capture the history of interactions, while state represents higher-level business concepts derived from those events.</p><h3>Some states are implicit</h3><p>Certain business concepts are never explicitly represented as events.</p><p>For example, the concept of a visit is central to many commerce analytics metrics such as revenue per visit. Yet there is no explicit “start visit” or “end visit” event emitted by integrations. Instead, visits are inferred from patterns of related events occurring over time.</p><p>Reconstructing visits dynamically from billions of raw events every time a metric is requested would be computationally prohibitive. Persisting derived state makes these analytics practical.</p><h3>Some states are complex</h3></div>
     - ID: "76c93dec-a8a6-4185-9fd9-8247ebfb2dd0"
       Hint: ArticleReadTime
       Value: 7 min read
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "fdb4016d-1a14-4b95-8017-8549e5c07512"
+      Value: "4168bee2-ff4a-4e69-8a85-825d0638c466"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\federico.mujica@sitecore.com
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "bb96e156-f355-4cc6-894b-5e70a45d8f30"
+      Hint: ArticleImage
+      Value: |
+        <Image src="https://ze-dam.sitecoresandbox.cloud/api/public/content/91925-payloads-events-state-how-coveo-builds-trusted-data-hero?v=20c4c528" dam-id="oqO27slfSuWM1X3GPRvkBQ" width="1920" height="1080" alt="Payloads, Events, State: How Coveo Builds Trusted Data" dam-content-type="Image" thumbnailsrc="https://ze-dam.sitecoresandbox.cloud/api/gateway/91925/thumbnail" />
     - ID: "bfa05db5-8ccf-4ba2-b312-21194a8a5d75"
       Hint: ArticleKeyTakeaways
       Value: |
-        <div class="ck-content"><ul><li>First-party data strategies are essential as third-party cookies disappear</li><li>Transparent consent management builds customer trust</li><li>Contextual targeting is making a modern comeback</li><li>Server-side analytics improve accuracy and compliance</li></ul></div>
+        <div class="ck-content"><ul><li>Payload Normalization</li><li>Separation of concerns</li><li>Integration inertia</li><li>Changing event sources</li><li>One payload, multiple events</li><li>Events Versus State</li><li>Some states are implicit</li><li>Some states are complex</li><li>Product only has one state</li><li>State needs to be auditable</li><li>Related resources</li></ul></div>
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260519T184809Z
+      Value: 20260610T153941Z

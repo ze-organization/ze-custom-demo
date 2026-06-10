@@ -1,6 +1,11 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { Default as ArticleBody, WithSidebar as ArticleBodyWithSidebar, Wide as ArticleBodyWide } from '@/components/uiim/article/ArticleBody';
+import {
+  Default as ArticleBody,
+  WithSidebar as ArticleBodyWithSidebar,
+  Wide as ArticleBodyWide,
+  Coveo as ArticleBodyCoveo,
+} from '@/components/uiim/article/ArticleBody';
 import {
   defaultProps,
   propsEditing,
@@ -212,6 +217,25 @@ describe('ArticleBody Component', () => {
 
     it('should render fallback when no route fields', () => {
       render(<ArticleBodyWide {...(propsNoRouteFields as unknown as Parameters<typeof ArticleBodyWide>[0])} />);
+      expect(screen.getByText('ArticleBody')).toBeInTheDocument();
+    });
+  });
+
+  describe('Coveo variant', () => {
+    it('should render article content with Coveo sidebar', () => {
+      render(<ArticleBodyCoveo {...(defaultProps as unknown as Parameters<typeof ArticleBodyCoveo>[0])} />);
+      expect(screen.getByTestId('article-content')).toBeInTheDocument();
+      expect(screen.getByTestId('coveo-article-sidebar')).toBeInTheDocument();
+      expect(screen.getByText('Inside this article:')).toBeInTheDocument();
+    });
+
+    it('should render author bio below content', () => {
+      render(<ArticleBodyCoveo {...(defaultProps as unknown as Parameters<typeof ArticleBodyCoveo>[0])} />);
+      expect(screen.getByTestId('author-bio')).toBeInTheDocument();
+    });
+
+    it('should render fallback when no route fields', () => {
+      render(<ArticleBodyCoveo {...(propsNoRouteFields as unknown as Parameters<typeof ArticleBodyCoveo>[0])} />);
       expect(screen.getByText('ArticleBody')).toBeInTheDocument();
     });
   });

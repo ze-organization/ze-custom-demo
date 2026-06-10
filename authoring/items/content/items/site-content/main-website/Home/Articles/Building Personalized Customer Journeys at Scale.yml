@@ -7,7 +7,7 @@ SharedFields:
 - ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
   Hint: __Thumbnail
   Value: |
-    <image mediaid="{A289A936-B207-416A-9D68-A48C1C79DC4F}" />
+    <image mediaid="{8410AEAA-F8EA-485F-9F4D-07CBF3B04B46}" />
 Languages:
 - Language: en
   Versions:
@@ -15,37 +15,41 @@ Languages:
     Fields:
     - ID: "068d4fa8-7b15-4b86-b38a-9e40a58c548b"
       Hint: ArticleAuthor
-      Value: "{18A183C6-6E69-40F3-A0D9-0973D05C8D3B}"
+      Value: "{B891D7CC-6592-47A1-A73B-28ED2267B6B2}"
     - ID: "1cd91ae6-dbe5-40ef-b819-b1959a8a6903"
       Hint: Title
-      Value: Building Personalized Customer Journeys at Scale
+      Value: Most Conversational RAG Systems Work — Until They Don’t
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20260519T184705Z
     - ID: "2fecdae7-6f5d-46a8-a9c9-c128dc4f4d0c"
       Hint: ArticlePublicationDate
-      Value: 20260501T000000Z
+      Value: 20260603T000000Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: Building Personalized Customer Journeys at Scale
     - ID: "63471bba-943c-4d82-b7bf-d7ec82babbf7"
       Hint: ArticleContent
       Value: |
-        <div class="ck-content"><p>Personalization has moved from a nice-to-have to a business imperative. Customers expect brands to understand their preferences and deliver relevant experiences at every touchpoint.</p><h2>Start with Data Unification</h2><p>Effective personalization begins with a unified view of the customer. Customer data platforms aggregate data from websites, apps, email, commerce, and offline interactions.</p><h2>Define Your Personalization Strategy</h2><p>Focus on high-impact moments like product recommendations, content suggestions, and journey orchestration rather than trying to personalize everything at once.</p><h2>Use Rules and AI Together</h2><p>Rule-based personalization handles known scenarios reliably, while AI-powered models discover patterns that humans miss. The best implementations combine both approaches.</p><h2>Measure and Iterate</h2><p>Establish clear KPIs, run A/B tests, and continuously refine your models based on actual performance data.</p></div>
+        <div class="ck-content"><p>Most conversational RAG systems work surprisingly well. They answer simple questions perfectly… and then completely fall apart on anything that requires more than one step of reasoning.</p><p>The problem isn’t retrieval. It’s query structure.</p><p>In a conversational RAG search agent, the simplest and most direct path is straightforward: one query, one search, one response.</p><p>This is what we call simple search. While it likely covers the vast majority of use cases, sooner or later you will need to address the remaining, more complex scenarios. But what exactly makes a query complex? And how can we systematically categorize complex queries to gain confidence when testing?</p><p>Without a clear understanding of the patterns behind query decomposition, you risk compensating with quantity over quality—writing more and more tests in an attempt to build confidence, rather than designing fewer, well-targeted tests that truly validate the system’s behavior.</p><p>Without being exhaustive, here are the most common query patterns I was able to identify, and how a conversational search system should treat them.</p><h2>Simple Search</h2><p>A simple search contains a single intent and can be resolved with one retrieval step.</p><p>Who produced Star Wars?</p><p>There is no ambiguity, no dependency, and no need for orchestration. One query goes in, one search is performed, and one answer comes out.</p><p>This is the happy path—and the baseline against which everything else should be measured.</p><h2>Multi-Query (but Not Composite)</h2><p>Moving up the complexity ladder, the next pattern to understand is the multi-query.</p><p>Who is the Star Wars producer? What is a cinema?</p><p>This looks more complex at first glance, but it is not a composite query.</p><ul><li>These are two unrelated questions</li><li>There is no semantic or logical dependency</li><li>Each question can be answered independently</li></ul><p>From a system perspective, this should be treated as multiple simple searches, not a single composite one. The only added responsibility is segmentation, not reasoning.</p><p>This distinction is important: confusing multi-query inputs with composite queries often leads to unnecessary orchestration and over-engineering.</p><h2>Composite Queries</h2><p>A composite query is a single user input that contains multiple related information needs that share a common context which must be decomposed and resolved before producing a unified answer.</p><p>Who is the Star Wars producer and who played Han Solo?</p><p>Here, the system must:</p><ol><li>Identify multiple intents</li><li>Decompose them into sub-queries</li><li>Execute searches</li><li>Merge the results into a coherent response</li></ol><p>Not all composite queries are equal, though. They come in several distinct patterns, each with different implications for retrieval, reasoning, and testing.</p><h2>Conjunctive Composite Queries</h2><p>Pattern: Multiple related questions joined by and, also, or similar connectors.</p><p>Who produced Star Wars and who played Han Solo?</p><p>Each sub-query is independent, but they are logically grouped and expected to be answered together.</p><ul><li>Decompose into parallel searches</li><li>Aggregate results</li><li>Ensure no intent is dropped</li></ul><p>This is often the entry point into composite query handling.</p><h2>Dependent Composite Queries</h2><p>Pattern: The second question depends on the answer to the first.</p><p>Who directed Star Wars and what other movies did he direct?</p><p>You cannot answer the second part without first resolving the entity from the first.</p><ul><li>Resolve the first entity</li><li>Carry context forward</li><li>Issue a follow-up query using the derived entity</li></ul><p>This introduces statefulness, even in otherwise stateless systems.</p><h2>Multi-Hop Queries</h2></div>
     - ID: "76c93dec-a8a6-4185-9fd9-8247ebfb2dd0"
       Hint: ArticleReadTime
       Value: 6 min read
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "bb1097e9-fce8-495c-9114-02a214b4a0bc"
+      Value: "5558dc7d-fcff-44df-926a-25d2ffae3a78"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\federico.mujica@sitecore.com
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "bb96e156-f355-4cc6-894b-5e70a45d8f30"
+      Hint: ArticleImage
+      Value: |
+        <Image src="https://ze-dam.sitecoresandbox.cloud/api/public/content/91909-conversational-rag-hero?v=f27255fd" dam-id="2sm7KLFGS56HHPqVMhbnEQ" width="1920" height="1080" alt="Most Conversational RAG Systems Work — Until They Don’t" dam-content-type="Image" thumbnailsrc="https://ze-dam.sitecoresandbox.cloud/api/gateway/91909/thumbnail" />
     - ID: "bfa05db5-8ccf-4ba2-b312-21194a8a5d75"
       Hint: ArticleKeyTakeaways
       Value: |
-        <div class="ck-content"><ul><li>Data unification via CDPs is the foundation of personalization</li><li>Focus on high-impact moments rather than personalizing everything</li><li>Combine rule-based and AI-powered personalization</li><li>Expect 10-15% revenue lift from effective personalization</li></ul></div>
+        <div class="ck-content"><ul><li>Simple Search</li><li>Multi-Query (but Not Composite)</li><li>Composite Queries</li><li>Conjunctive Composite Queries</li><li>Dependent Composite Queries</li><li>Multi-Hop Queries</li><li>Comparative Composite Queries</li><li>Conditional Composite Queries</li><li>Enumerative Composite Queries</li><li>Why This Taxonomy Matters</li><li>Mapping Query Patterns to Agent Architectures</li><li>Strategy 1: Single Agent with a Multi-Search Tool Loop</li></ul></div>
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20260519T184706Z
+      Value: 20260610T153918Z
