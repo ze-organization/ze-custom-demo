@@ -11,7 +11,14 @@ import * as TabNavigationSection from 'src/components/uiim/navigation/TabNavigat
 import * as SiteFooter from 'src/components/uiim/navigation/SiteFooter';
 import * as NavigationHeader from 'src/components/uiim/navigation/NavigationHeader';
 import * as AnnouncementBar from 'src/components/uiim/navigation/AnnouncementBar';
+import * as SmartMedia from 'src/components/uiim/media/SmartMedia';
 import * as ImageGallery from 'src/components/uiim/media/ImageGallery';
+import * as LandingStats from 'src/components/uiim/landing/LandingStats';
+import * as LandingSocialProof from 'src/components/uiim/landing/LandingSocialProof';
+import * as LandingHero from 'src/components/uiim/landing/LandingHero';
+import * as LandingFinalCTA from 'src/components/uiim/landing/LandingFinalCTA';
+import * as LandingFeatures from 'src/components/uiim/landing/LandingFeatures';
+import * as LandingFAQ from 'src/components/uiim/landing/LandingFAQ';
 import * as NewsletterSignup from 'src/components/uiim/forms/NewsletterSignup';
 import * as ValuePropositionGrid from 'src/components/uiim/content/ValuePropositionGrid';
 import * as TrustStatsRow from 'src/components/uiim/content/TrustStatsRow';
@@ -26,12 +33,6 @@ import * as HeroBanner from 'src/components/uiim/banners/HeroBanner';
 import * as CTABanner from 'src/components/uiim/banners/CTABanner';
 import * as ArticleHero from 'src/components/uiim/article/ArticleHero';
 import * as ArticleBody from 'src/components/uiim/article/ArticleBody';
-import * as LandingHero from 'src/components/uiim/landing/LandingHero';
-import * as LandingFeatures from 'src/components/uiim/landing/LandingFeatures';
-import * as LandingStats from 'src/components/uiim/landing/LandingStats';
-import * as LandingSocialProof from 'src/components/uiim/landing/LandingSocialProof';
-import * as LandingFAQ from 'src/components/uiim/landing/LandingFAQ';
-import * as LandingFinalCTA from 'src/components/uiim/landing/LandingFinalCTA';
 import * as input from 'src/components/ui/input';
 import * as card from 'src/components/ui/card';
 import * as button from 'src/components/ui/button';
@@ -43,14 +44,15 @@ import * as useRouter from 'src/components/search-experience/search-components/u
 import * as useParams from 'src/components/search-experience/search-components/useParams';
 import * as useEvent from 'src/components/search-experience/search-components/useEvent';
 import * as useDebounce from 'src/components/search-experience/search-components/useDebounce';
+import * as models from 'src/components/search-experience/search-components/models';
+import * as constants from 'src/components/search-experience/search-components/constants';
 import * as SearchSkeletonItem from 'src/components/search-experience/search-components/SearchSkeletonItem';
 import * as SearchPagination from 'src/components/search-experience/search-components/SearchPagination';
 import * as SearchItemCommon from 'src/components/search-experience/search-components/SearchItemCommon';
 import * as SearchInput from 'src/components/search-experience/search-components/SearchInput';
 import * as SearchError from 'src/components/search-experience/search-components/SearchError';
 import * as SearchEmptyResults from 'src/components/search-experience/search-components/SearchEmptyResults';
-import * as models from 'src/components/search-experience/search-components/models';
-import * as constants from 'src/components/search-experience/search-components/constants';
+import * as index from 'src/components/search-experience/search-components/SearchItem/index';
 import * as SearchItemTitle from 'src/components/search-experience/search-components/SearchItem/SearchItemTitle';
 import * as SearchItemTags from 'src/components/search-experience/search-components/SearchItem/SearchItemTags';
 import * as SearchItemSummary from 'src/components/search-experience/search-components/SearchItem/SearchItemSummary';
@@ -58,7 +60,6 @@ import * as SearchItemSubTitle from 'src/components/search-experience/search-com
 import * as SearchItemLink from 'src/components/search-experience/search-components/SearchItem/SearchItemLink';
 import * as SearchItemImage from 'src/components/search-experience/search-components/SearchItem/SearchItemImage';
 import * as SearchItemCategory from 'src/components/search-experience/search-components/SearchItem/SearchItemCategory';
-import * as index from 'src/components/search-experience/search-components/SearchItem/index';
 import * as Title from 'src/components/basic/title/Title';
 import * as RowSplitter from 'src/components/basic/row-splitter/RowSplitter';
 import * as RichText from 'src/components/basic/rich-text/RichText';
@@ -85,7 +86,14 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['SiteFooter', { ...SiteFooter }],
   ['NavigationHeader', { ...NavigationHeader, componentType: 'client' }],
   ['AnnouncementBar', { ...AnnouncementBar }],
+  ['SmartMedia', { ...SmartMedia, componentType: 'client' }],
   ['ImageGallery', { ...ImageGallery }],
+  ['LandingStats', { ...LandingStats }],
+  ['LandingSocialProof', { ...LandingSocialProof }],
+  ['LandingHero', { ...LandingHero }],
+  ['LandingFinalCTA', { ...LandingFinalCTA }],
+  ['LandingFeatures', { ...LandingFeatures }],
+  ['LandingFAQ', { ...LandingFAQ, componentType: 'client' }],
   ['NewsletterSignup', { ...NewsletterSignup, componentType: 'client' }],
   ['ValuePropositionGrid', { ...ValuePropositionGrid }],
   ['TrustStatsRow', { ...TrustStatsRow }],
@@ -100,12 +108,6 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['CTABanner', { ...CTABanner }],
   ['ArticleHero', { ...ArticleHero, componentType: 'client' }],
   ['ArticleBody', { ...ArticleBody }],
-  ['LandingHero', { ...LandingHero }],
-  ['LandingFeatures', { ...LandingFeatures }],
-  ['LandingStats', { ...LandingStats }],
-  ['LandingSocialProof', { ...LandingSocialProof }],
-  ['LandingFAQ', { ...LandingFAQ, componentType: 'client' }],
-  ['LandingFinalCTA', { ...LandingFinalCTA }],
   ['input', { ...input }],
   ['card', { ...card }],
   ['button', { ...button }],
@@ -116,14 +118,15 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['useParams', { ...useParams, componentType: 'client' }],
   ['useEvent', { ...useEvent, componentType: 'client' }],
   ['useDebounce', { ...useDebounce, componentType: 'client' }],
+  ['models', { ...models }],
+  ['constants', { ...constants }],
   ['SearchSkeletonItem', { ...SearchSkeletonItem, componentType: 'client' }],
   ['SearchPagination', { ...SearchPagination, componentType: 'client' }],
   ['SearchItemCommon', { ...SearchItemCommon, componentType: 'client' }],
   ['SearchInput', { ...SearchInput, componentType: 'client' }],
   ['SearchError', { ...SearchError, componentType: 'client' }],
   ['SearchEmptyResults', { ...SearchEmptyResults, componentType: 'client' }],
-  ['models', { ...models }],
-  ['constants', { ...constants }],
+  ['index', { ...index, componentType: 'client' }],
   ['SearchItemTitle', { ...SearchItemTitle, componentType: 'client' }],
   ['SearchItemTags', { ...SearchItemTags, componentType: 'client' }],
   ['SearchItemSummary', { ...SearchItemSummary, componentType: 'client' }],
@@ -131,7 +134,6 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['SearchItemLink', { ...SearchItemLink, componentType: 'client' }],
   ['SearchItemImage', { ...SearchItemImage, componentType: 'client' }],
   ['SearchItemCategory', { ...SearchItemCategory, componentType: 'client' }],
-  ['index', { ...index, componentType: 'client' }],
   ['Title', { ...Title }],
   ['RowSplitter', { ...RowSplitter }],
   ['RichText', { ...RichText }],

@@ -1,5 +1,5 @@
 'use client';
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { Suspense, useCallback, useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useSearchParams } from 'next/navigation';
 import { useSearch } from '@sitecore-content-sdk/nextjs/search';
@@ -139,7 +139,7 @@ const SearchLayout = ({
 
 // --- Default variant (pagination) ---
 
-export const Default = (props: SearchExperienceProps) => {
+const DefaultContent = (props: SearchExperienceProps) => {
   const { params, fields, page, rendering } = props;
   const t = useTranslations();
 
@@ -245,9 +245,22 @@ export const Default = (props: SearchExperienceProps) => {
   );
 };
 
+export const Default = (props: SearchExperienceProps) => (
+  <Suspense
+    fallback={
+      <div
+        className={cn('component search-experience-v2 min-h-[12rem]', props.params?.styles)}
+        aria-hidden
+      />
+    }
+  >
+    <DefaultContent {...props} />
+  </Suspense>
+);
+
 // --- LoadMore variant (infinite scroll) ---
 
-export const LoadMore = (props: SearchExperienceProps) => {
+const LoadMoreContent = (props: SearchExperienceProps) => {
   const { params, fields, page, rendering } = props;
   const t = useTranslations();
 
@@ -339,3 +352,16 @@ export const LoadMore = (props: SearchExperienceProps) => {
     />
   );
 };
+
+export const LoadMore = (props: SearchExperienceProps) => (
+  <Suspense
+    fallback={
+      <div
+        className={cn('component search-experience-v2 min-h-[12rem]', props.params?.styles)}
+        aria-hidden
+      />
+    }
+  >
+    <LoadMoreContent {...props} />
+  </Suspense>
+);

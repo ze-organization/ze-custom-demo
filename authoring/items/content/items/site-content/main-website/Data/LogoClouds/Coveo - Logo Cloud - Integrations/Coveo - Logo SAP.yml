@@ -1,0 +1,42 @@
+﻿---
+ID: "237640a2-5264-4158-937f-c1e5e73f3176"
+Parent: "34ff1ec1-8ec9-45eb-af36-ab01048a55d1"
+Template: "c48880b3-b0b9-49ea-bf19-931c68a8a37c"
+Path: "/sitecore/content/main/main-website/Data/LogoClouds/Coveo - Logo Cloud - Integrations/Coveo - Logo SAP"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "17cc8e99-43cd-4f35-8ed4-6c7a13334449"
+      Hint: CompanyName
+      Value: SAP
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260610T013629Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "6d1ac8e5-0897-4beb-af96-3b2bb80b0668"
+      Hint: LogoImage
+      Value: |
+        <Image src="https://ze-dam.sitecoresandbox.cloud/api/public/content/84839-local-imgi_139_sap-logo?v=edf997f8" dam-id="yKRABWEPTw-i71IPTaTxtg" width="47" height="47" alt="sap logo" dam-content-type="Image" thumbnailsrc="https://ze-dam.sitecoresandbox.cloud/api/gateway/84839/thumbnail" />
+    - ID: "736a53fe-18e4-4fc8-a2c3-164fa8dc9391"
+      Hint: LogoLink
+      Value: |
+        <link text="SAP" anchor="" linktype="external" class="" title="" target="" querystring="" url="https://www.coveo.com/en/integrations/sap-search" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fc48cb8d-fd4e-4383-b1c9-959202bbb893"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260610T013636Z

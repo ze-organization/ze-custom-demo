@@ -1,0 +1,45 @@
+﻿---
+ID: "560f2233-6ca2-439b-9bd5-ea37c77c10f6"
+Parent: "b70af11d-580e-4b56-a9fc-4ee87883eeba"
+Template: "e2014bdc-3af2-4add-a731-86e873ebf24c"
+Path: "/sitecore/content/main/main-website/Data/FeatureCardsGrids/Coveo - Feature Cards Grid - Solutions/Coveo - AI Website"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260610T010248Z
+    - ID: "3d6a0f6b-523e-491a-8b4d-2b84f10855c2"
+      Hint: CardLink
+      Value: |
+        <link text="Explore" anchor="" linktype="external" class="" title="" target="" querystring="" url="https://www.coveo.com/en/solutions/website-search" />
+    - ID: "3f85410a-d1a3-426d-9908-777c3a0b7de0"
+      Hint: CardDescription
+      Value: <p>AI that personalizes every visit, every time. Plug into any CMS, DXP, or custom stack.</p>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "72c710ae-76ba-4891-9977-4ce457c5fab9"
+    - ID: "ad732d62-2a3e-452a-b7d6-8f943b616f6d"
+      Hint: CardImage
+      Value: |
+        <Image src="https://ze-dam.sitecoresandbox.cloud/api/public/content/85452-local-imgi_195_reveal_card_website?v=084b0a4a" dam-id="1B2yWDrHTmGlBi-fNYB8ww" alt="reveal card website" dam-content-type="Image" thumbnailsrc="https://ze-dam.sitecoresandbox.cloud/api/gateway/85452/thumbnail" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "c0500111-9439-41c0-89e5-d44cf419ef50"
+      Hint: CardTitle
+      Value: AI Website
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260610T013620Z

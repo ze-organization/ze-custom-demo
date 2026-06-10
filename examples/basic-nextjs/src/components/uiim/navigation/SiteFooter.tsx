@@ -217,6 +217,84 @@ export const Minimal = (props: SiteFooterProps): JSX.Element => {
 /* ────────────────────────────────────────────
    MegaFooter — expanded with newsletter
    ──────────────────────────────────────────── */
+const COVEO_FOOTER_COLUMNS = [
+  { title: 'Platform', links: ['Overview', 'AI Relevance', 'Pricing', 'Integrations'] },
+  { title: 'Solutions', links: ['AI Commerce', 'AI Service', 'AI Website', 'AI Workplace'] },
+  { title: 'Developers', links: ['Documentation', 'MCP Server', 'API', 'Community'] },
+  { title: 'Company', links: ['About', 'Customers', 'Careers', 'Contact'] },
+];
+
+/* Coveo variant — navy mega footer with Coveo link columns */
+export const Coveo = (props: SiteFooterProps): JSX.Element => {
+  const { params } = props;
+  const { styles, RenderingIdentifier } = params;
+  const brandLogo = getBrandLogo(props);
+
+  if (!params) return <SiteFooterDefaultComponent />;
+
+  return (
+    <div className={cn('component site-footer', styles)} id={RenderingIdentifier}>
+      <footer
+        className="w-full"
+        style={{
+          backgroundColor: 'var(--brand-footer-bg, #1A0F3D)',
+          color: 'var(--brand-footer-fg, #E8EAF0)',
+        }}
+      >
+        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 md:py-16">
+          <div className="grid gap-10 md:grid-cols-6">
+            <div className="md:col-span-2 space-y-5">
+              <Logo brandLogo={brandLogo} />
+              <p className="max-w-xs text-sm font-light opacity-70 font-[var(--brand-body-font,inherit)]">
+                AI-Search &amp; Conversational Discovery built for enterprise ROI.
+              </p>
+              <SocialIcons />
+            </div>
+            {COVEO_FOOTER_COLUMNS.map((col) => (
+              <div key={col.title}>
+                <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider opacity-80 font-[var(--brand-heading-font,inherit)]">
+                  {col.title}
+                </h3>
+                <ul className="space-y-2.5">
+                  {col.links.map((link) => (
+                    <li key={link}>
+                      <a
+                        href="https://www.coveo.com/"
+                        className="text-sm font-light opacity-60 transition-opacity hover:opacity-100 font-[var(--brand-body-font,inherit)]"
+                      >
+                        {link}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <div
+            className="mt-12 flex flex-col items-center justify-between gap-4 border-t pt-8 sm:flex-row"
+            style={{ borderColor: 'rgba(255,255,255,0.12)' }}
+          >
+            <p
+              className="text-sm font-light opacity-50 font-[var(--brand-body-font,inherit)]"
+              style={{ color: 'var(--brand-footer-fg, #ffffff)' }}
+            >
+              &copy; {new Date().getFullYear()} Coveo Solutions Inc. All rights reserved.
+            </p>
+            <div className="flex flex-wrap gap-6 text-sm font-light opacity-50">
+              <a href="https://www.coveo.com/en/company/legal" className="hover:opacity-100 transition-opacity">
+                Privacy Policy
+              </a>
+              <a href="https://www.coveo.com/en/company/legal" className="hover:opacity-100 transition-opacity">
+                Terms of Service
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
 export const MegaFooter = (props: SiteFooterProps): JSX.Element => {
   const { params } = props;
   const { styles, RenderingIdentifier } = params;

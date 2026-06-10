@@ -200,6 +200,94 @@ export const Split = ({ fields, params, page }: CTABannerProps): JSX.Element => 
 /* ────────────────────────────────────────────
    Minimal — subtle background, inline text + link
    ──────────────────────────────────────────── */
+/* Coveo variant — dark navy conversion band with optional split image */
+export const Coveo = ({ fields, params, page }: CTABannerProps): JSX.Element => {
+  const { styles, RenderingIdentifier } = params;
+  const isEditing = page?.mode?.isEditing;
+  if (!fields) return <CTABannerDefaultComponent />;
+
+  const hasBgImage = fields.BackgroundImage?.value?.src || isEditing;
+
+  if (hasBgImage) {
+    return (
+      <div className={cn('component cta-banner', styles)} id={RenderingIdentifier}>
+        <section
+          className="relative w-full overflow-hidden"
+          style={{ backgroundColor: 'var(--brand-secondary, #1A0F3D)' }}
+        >
+          <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 py-12 md:grid-cols-2 md:px-6 md:py-16">
+            <div className="text-left" style={{ color: 'var(--brand-secondary-foreground, #ffffff)' }}>
+              {(fields.Title?.value || isEditing) && (
+                <Text
+                  field={fields.Title}
+                  tag="h2"
+                  className="text-2xl font-medium leading-tight sm:text-3xl md:text-4xl font-[var(--brand-heading-font,inherit)]"
+                />
+              )}
+              {(fields.Description?.value || isEditing) && (
+                <ContentSdkRichText
+                  field={fields.Description}
+                  className="mt-4 text-base font-light opacity-90 font-[var(--brand-body-font,inherit)]"
+                />
+              )}
+              <div className="mt-8">
+                <PrimaryButton
+                  field={fields.PrimaryLink}
+                  isEditing={isEditing}
+                  className="rounded-[var(--brand-button-radius,9999px)] bg-[var(--brand-primary)] px-8 text-[var(--brand-primary-foreground)]"
+                />
+              </div>
+            </div>
+            <div className="relative aspect-video overflow-hidden rounded-[var(--brand-card-radius,0.5rem)]">
+              <SmartMedia
+                field={fields.BackgroundImage}
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+    );
+  }
+
+  return (
+    <div className={cn('component cta-banner', styles)} id={RenderingIdentifier}>
+      <section
+        className="w-full px-4 py-16 md:py-20"
+        style={{
+          backgroundColor: 'var(--brand-secondary, #1A0F3D)',
+          color: 'var(--brand-secondary-foreground, #ffffff)',
+        }}
+      >
+        <div className="mx-auto max-w-4xl text-center">
+          {(fields.Title?.value || isEditing) && (
+            <Text
+              field={fields.Title}
+              tag="h2"
+              className="text-3xl font-medium leading-tight sm:text-4xl md:text-5xl font-[var(--brand-heading-font,inherit)]"
+            />
+          )}
+          {(fields.Description?.value || isEditing) && (
+            <ContentSdkRichText
+              field={fields.Description}
+              className="mt-4 text-lg font-light opacity-90 font-[var(--brand-body-font,inherit)]"
+            />
+          )}
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+            <PrimaryButton
+              field={fields.PrimaryLink}
+              isEditing={isEditing}
+              className="rounded-[var(--brand-button-radius,9999px)] bg-[var(--brand-primary)] px-8 py-3.5 text-[var(--brand-primary-foreground)]"
+            />
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
 export const Minimal = ({ fields, params, page }: CTABannerProps): JSX.Element => {
   const { styles, RenderingIdentifier } = params;
   const isEditing = page?.mode?.isEditing;

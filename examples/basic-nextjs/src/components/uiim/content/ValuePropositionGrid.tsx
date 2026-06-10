@@ -247,6 +247,72 @@ export const FourColumn = ({ fields, params, page }: ValuePropositionGridProps):
 /* ────────────────────────────────────────────
    Horizontal — icon left, text right, stacked vertically
    ──────────────────────────────────────────── */
+/* Coveo variant — dark navy section with icon value props */
+export const Coveo = ({ fields, params, page }: ValuePropositionGridProps): JSX.Element => {
+  const { styles, RenderingIdentifier } = params;
+  const isEditing = page?.mode?.isEditing;
+  const datasource = fields?.data?.datasource;
+  if (!datasource) return <ValuePropositionGridDefaultComponent />;
+  const items = datasource.children?.results || [];
+
+  return (
+    <div className={cn('component value-proposition-grid', styles)} id={RenderingIdentifier}>
+      <section
+        className="w-full px-4 py-16 md:py-24"
+        style={{
+          backgroundColor: 'var(--brand-secondary, #1A0F3D)',
+          color: 'var(--brand-secondary-foreground, #ffffff)',
+        }}
+      >
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto mb-12 max-w-3xl text-center">
+            {(datasource.title?.jsonValue?.value || isEditing) && (
+              <Text
+                field={datasource.title?.jsonValue}
+                tag="h2"
+                className="text-3xl font-medium tracking-tight sm:text-4xl font-[var(--brand-heading-font,inherit)]"
+              />
+            )}
+            {(datasource.description?.jsonValue?.value || isEditing) && (
+              <ContentSdkRichText
+                field={datasource.description?.jsonValue}
+                className="mt-4 text-lg font-light opacity-80 font-[var(--brand-body-font,inherit)]"
+              />
+            )}
+          </div>
+          <div className="grid gap-10 md:grid-cols-3">
+            {items.map((item) => (
+              <div key={item.id} className="flex flex-col items-center text-center">
+                {(item.itemIcon?.jsonValue?.value?.src || isEditing) && (
+                  <div className="mb-5 h-12 w-12 overflow-hidden">
+                    <ContentSdkImage
+                      field={item.itemIcon?.jsonValue}
+                      className="h-full w-full object-contain brightness-0 invert"
+                    />
+                  </div>
+                )}
+                {(item.itemTitle?.jsonValue?.value || isEditing) && (
+                  <Text
+                    field={item.itemTitle?.jsonValue}
+                    tag="h3"
+                    className="text-lg font-medium leading-snug font-[var(--brand-heading-font,inherit)]"
+                  />
+                )}
+                {(item.itemDescription?.jsonValue?.value || isEditing) && (
+                  <ContentSdkRichText
+                    field={item.itemDescription?.jsonValue}
+                    className="mt-2 text-sm font-light opacity-70 font-[var(--brand-body-font,inherit)]"
+                  />
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
 export const Horizontal = ({ fields, params, page }: ValuePropositionGridProps): JSX.Element => {
   const { styles, RenderingIdentifier } = params;
   const isEditing = page?.mode?.isEditing;

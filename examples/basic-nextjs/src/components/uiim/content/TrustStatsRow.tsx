@@ -192,6 +192,65 @@ export const WithIcons = ({ fields, params, page }: TrustStatsRowProps): JSX.Ele
 /* ────────────────────────────────────────────
    LogoRow — images/logos as primary visual, StatValue hidden
    ──────────────────────────────────────────── */
+/* Coveo variant — logo row with prominent cyan stat values */
+export const Coveo = ({ fields, params, page }: TrustStatsRowProps): JSX.Element => {
+  const { styles, RenderingIdentifier } = params;
+  const isEditing = page?.mode?.isEditing;
+  const datasource = fields?.data?.datasource;
+  if (!datasource) return <TrustStatsRowDefaultComponent />;
+  const items = datasource.children?.results || [];
+
+  return (
+    <div className={cn('component trust-stats-row', styles)} id={RenderingIdentifier}>
+      <section
+        className="w-full px-4 py-14 md:py-20"
+        style={{ backgroundColor: 'var(--brand-bg, #ffffff)' }}
+      >
+        <div className="mx-auto max-w-7xl">
+          <SectionHeader datasource={datasource} isEditing={isEditing} />
+          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+            {items.map((item) => (
+              <div key={item.id} className="flex flex-col items-center text-center">
+                {(item.statIcon?.jsonValue?.value?.src || isEditing) && (
+                  <div className="mb-4 h-10 w-auto overflow-hidden">
+                    <ContentSdkImage
+                      field={item.statIcon?.jsonValue}
+                      className="h-full w-auto max-w-[120px] object-contain"
+                    />
+                  </div>
+                )}
+                {(item.statValue?.jsonValue?.value || isEditing) && (
+                  <Text
+                    field={item.statValue?.jsonValue}
+                    tag="p"
+                    className="text-3xl font-medium md:text-4xl font-[var(--brand-heading-font,inherit)]"
+                    style={{ color: 'var(--brand-primary)' }}
+                  />
+                )}
+                {(item.statLabel?.jsonValue?.value || isEditing) && (
+                  <Text
+                    field={item.statLabel?.jsonValue}
+                    tag="p"
+                    className="mt-2 text-sm font-light font-[var(--brand-body-font,inherit)]"
+                    style={{ color: 'var(--brand-fg, #111111)' }}
+                  />
+                )}
+                {(item.statDescription?.jsonValue?.value || isEditing) && (
+                  <ContentSdkRichText
+                    field={item.statDescription?.jsonValue}
+                    className="mt-1 text-xs font-medium opacity-70 font-[var(--brand-body-font,inherit)]"
+                    style={{ color: 'var(--brand-muted-fg, #5C6370)' }}
+                  />
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
 export const LogoRow = ({ fields, params, page }: TrustStatsRowProps): JSX.Element => {
   const { styles, RenderingIdentifier } = params;
   const isEditing = page?.mode?.isEditing;

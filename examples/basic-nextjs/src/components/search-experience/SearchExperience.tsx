@@ -1,5 +1,5 @@
 'use client';
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { Suspense, useCallback, useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useSearchParams } from 'next/navigation';
 import { useSitecore } from '@sitecore-content-sdk/nextjs';
@@ -18,7 +18,7 @@ import { useParams } from './search-components/useParams';
 import { DICTIONARY_KEYS, gridColsClass } from './search-components/constants';
 import { useRouter } from './search-components/useRouter';
 
-export const Default = (props: SearchExperienceProps) => {
+const DefaultContent = (props: SearchExperienceProps) => {
   const { page } = useSitecore();
   const { params } = props;
   const t = useTranslations();
@@ -141,3 +141,16 @@ export const Default = (props: SearchExperienceProps) => {
     </div>
   );
 };
+
+export const Default = (props: SearchExperienceProps) => (
+  <Suspense
+    fallback={
+      <div
+        className={cn('component search-indexing min-h-[12rem]', props.params?.styles)}
+        aria-hidden
+      />
+    }
+  >
+    <DefaultContent {...props} />
+  </Suspense>
+);

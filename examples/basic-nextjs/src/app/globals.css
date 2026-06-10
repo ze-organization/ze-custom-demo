@@ -86,29 +86,29 @@
    An unlayered :root block above @layer base ALWAYS wins the cascade.
    =================================================================== */
 
-/* CLIENT THEME — uncomment or replace with client values from Phase 4:
 :root {
-  --brand-primary: #00827f;
-  --brand-primary-foreground: #ffffff;
-  --brand-accent: #00dc00;
-  --brand-accent-foreground: #1a1a1a;
-  --brand-dark: #1a1a2e;
-  --brand-dark-foreground: #ffffff;
+  --brand-primary: #00C8E8;
+  --brand-primary-foreground: #0E0F12;
+  --brand-secondary: #1A0F3D;
+  --brand-secondary-foreground: #ffffff;
+  --brand-accent: #00C8E8;
+  --brand-accent-foreground: #0E0F12;
   --brand-bg: #ffffff;
-  --brand-fg: #1a1a2e;
-  --brand-muted: #f5f5f5;
-  --brand-muted-foreground: #6b7280;
-  --brand-border: #e5e7eb;
-  --brand-header-bg: #1a1a2e;
-  --brand-header-fg: #ffffff;
-  --brand-footer-bg: #1a1a2e;
-  --brand-footer-fg: #9ca3af;
-  --brand-heading-font: 'Poppins', sans-serif;
-  --brand-body-font: 'Open Sans', sans-serif;
-  --brand-button-radius: 0.375rem;
-  --brand-card-radius: 0.75rem;
+  --brand-fg: #0E0F12;
+  --brand-muted: #F4F5F8;
+  --brand-muted-foreground: #5C6370;
+  --brand-header-bg: #ffffff;
+  --brand-header-fg: #0E0F12;
+  --brand-footer-bg: #1A0F3D;
+  --brand-footer-fg: #E8EAF0;
+  --brand-border: #E2E4EA;
+  --brand-ring: #00C8E8;
+  --brand-heading-font: 'DM Sans', sans-serif;
+  --brand-body-font: 'DM Sans', sans-serif;
+  --brand-radius: 0.5rem;
+  --brand-button-radius: 9999px;
+  --brand-card-radius: 0.5rem;
 }
-*/
 
 @layer base {
   :root {

@@ -1,0 +1,42 @@
+﻿---
+ID: "8f39af7a-2bf6-4a32-b046-f048c94bd70e"
+Parent: "94c1469f-3806-4b6a-a232-f9cc9523269f"
+Template: "c48880b3-b0b9-49ea-bf19-931c68a8a37c"
+Path: "/sitecore/content/main/main-website/Data/LogoClouds/Coveo - Logo Cloud - Awards/Coveo - Award G2"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "17cc8e99-43cd-4f35-8ed4-6c7a13334449"
+      Hint: CompanyName
+      Value: G2 Users Love Us
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260610T013645Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "6d1ac8e5-0897-4beb-af96-3b2bb80b0668"
+      Hint: LogoImage
+      Value: |
+        <Image src="https://ze-dam.sitecoresandbox.cloud/api/public/content/84940-local-imgi_148_usersloveus_3_2?v=dee59ad3" dam-id="ez_R7758QCSSd8qqI4xytg" width="84" height="98" alt="usersloveus 3 2" dam-content-type="Image" thumbnailsrc="https://ze-dam.sitecoresandbox.cloud/api/gateway/84940/thumbnail" />
+    - ID: "736a53fe-18e4-4fc8-a2c3-164fa8dc9391"
+      Hint: LogoLink
+      Value: |
+        <link text="G2" anchor="" linktype="external" class="" title="" target="" querystring="" url="https://www.coveo.com/en/company/awards-and-recognition" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "bca2c02d-de9a-412a-b08d-f72bb4532c8f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260610T013708Z

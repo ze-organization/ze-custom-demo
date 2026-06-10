@@ -154,6 +154,7 @@ try {
 const host = (getArg('host') || process.env.CH_HOST || creds.host || '').replace(/\/+$/, '');
 let token = getArg('token') || process.env.CH_TOKEN || creds.token || '';
 const imagesDir = getArg('images-dir');
+const manifestFile = getArg('manifest', 'image-manifest.json');
 const uploadConfig = getArg('config') || creds.uploadConfig || 'AssetUploadConfiguration';
 const delay = parseInt(getArg('delay', '500'), 10);
 const dryRun = args.includes('--dry-run');
@@ -204,7 +205,9 @@ if (!token && !dryRun) {
 if (!imagesDir) { console.error('ERROR: --images-dir required'); process.exit(1); }
 
 // ── Load manifest ──
-const manifestPath = join(imagesDir, 'image-manifest.json');
+const manifestPath = manifestFile.includes('/')
+  ? manifestFile
+  : join(imagesDir, manifestFile);
 let manifest;
 try {
   manifest = JSON.parse(readFileSync(manifestPath, 'utf-8'));

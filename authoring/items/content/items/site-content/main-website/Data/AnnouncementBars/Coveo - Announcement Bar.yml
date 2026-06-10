@@ -1,0 +1,41 @@
+﻿---
+ID: "a89b0762-9a40-4888-9856-6bfae96cefe9"
+Parent: "93b0a4dc-4e8a-42db-85a4-d54e7a64d737"
+Template: "0903acad-5503-4cf9-9059-27bf4d93d80e"
+Path: "/sitecore/content/main/main-website/Data/AnnouncementBars/Coveo - Announcement Bar"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260610T010220Z
+    - ID: "4b73d90c-9eea-4684-9981-67ed5151f9a5"
+      Hint: BackgroundColor
+      Value: primary
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "47c0bf50-f5e2-43c9-ae25-89252171b49c"
+    - ID: "a41b269e-2809-44d3-98d7-10c5a1155fbe"
+      Hint: BarLink
+      Value: |
+        <link text="Watch Now" anchor="" linktype="external" class="" title="" target="_blank" querystring="" url="https://www.coveo.com/en/platform/whats-new" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260610T010229Z
+    - ID: "ecfad5f8-6af3-441a-a7a9-d4eba5c5712b"
+      Hint: Message
+      Value: ✨ Watch Now — New In Coveo Spring 2026

@@ -78,6 +78,38 @@ export const Default = ({ fields, params, page }: AnnouncementBarProps): JSX.Ele
   );
 };
 
+/* Coveo variant — centered promo strip, pill feel, normal case */
+export const Coveo = ({ fields, params, page }: AnnouncementBarProps): JSX.Element => {
+  const { styles, RenderingIdentifier } = params;
+  const isEditing = page?.mode?.isEditing;
+
+  if (!fields) return <AnnouncementBarDefaultComponent />;
+
+  return (
+    <div className={cn('component announcement-bar', styles)} id={RenderingIdentifier}>
+      <div
+        className="w-full px-4 py-2.5 text-center text-sm font-medium"
+        style={{
+          backgroundColor: 'var(--brand-primary)',
+          color: 'var(--brand-primary-foreground)',
+        }}
+      >
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-2">
+          {(fields.Message?.value || isEditing) && (
+            <Text field={fields.Message} tag="span" />
+          )}
+          {(fields.BarLink?.value?.href || isEditing) && (
+            <ContentSdkLink
+              field={fields.BarLink}
+              className="font-semibold underline underline-offset-2 transition-opacity hover:opacity-80"
+            />
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export const Highlight = ({ fields, params, page }: AnnouncementBarProps): JSX.Element => {
   const { styles, RenderingIdentifier } = params;
   const isEditing = page?.mode?.isEditing;

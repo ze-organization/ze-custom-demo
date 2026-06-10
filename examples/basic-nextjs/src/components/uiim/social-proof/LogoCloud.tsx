@@ -157,6 +157,58 @@ export const Grid = ({ fields, params, page }: LogoCloudProps): JSX.Element => {
 /* ────────────────────────────────────────────
    WithLabels — logo above, company name below
    ──────────────────────────────────────────── */
+/* Coveo variant — integration row or awards badge grid */
+export const Coveo = ({ fields, params, page }: LogoCloudProps): JSX.Element => {
+  const { styles, RenderingIdentifier } = params;
+  const isEditing = page?.mode?.isEditing;
+  const datasource = fields?.data?.datasource;
+  if (!datasource) return <LogoCloudDefaultComponent />;
+  const items = datasource.children?.results || [];
+  const title = datasource.title?.jsonValue?.value?.toLowerCase() ?? '';
+  const isAwards = title.includes('analyst') || items.length <= 4;
+
+  return (
+    <div className={cn('component logo-cloud', styles)} id={RenderingIdentifier}>
+      <section
+        className="w-full px-4 py-14 md:py-20"
+        style={{ backgroundColor: 'var(--brand-bg, #ffffff)' }}
+      >
+        <div className="mx-auto max-w-7xl">
+          {(datasource.title?.jsonValue?.value || isEditing) && (
+            <Text
+              field={datasource.title?.jsonValue}
+              tag="h2"
+              className="mb-10 text-center text-2xl font-medium md:text-3xl font-[var(--brand-heading-font,inherit)]"
+              style={{ color: 'var(--brand-fg, #111111)' }}
+            />
+          )}
+          <div
+            className={cn(
+              isAwards
+                ? 'flex flex-wrap items-center justify-center gap-10 md:gap-14'
+                : 'flex flex-wrap items-center justify-center gap-10 md:gap-16'
+            )}
+          >
+            {items.map((item) => (
+              <LogoWrapper key={item.id} item={item} isEditing={isEditing}>
+                {(item.logoImage?.jsonValue?.value?.src || isEditing) && (
+                  <ContentSdkImage
+                    field={item.logoImage?.jsonValue}
+                    className={cn(
+                      'object-contain transition-opacity hover:opacity-100',
+                      isAwards ? 'h-16 max-w-[120px] opacity-90' : 'h-8 max-w-[100px] opacity-70 hover:opacity-100'
+                    )}
+                  />
+                )}
+              </LogoWrapper>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
 export const WithLabels = ({ fields, params, page }: LogoCloudProps): JSX.Element => {
   const { styles, RenderingIdentifier } = params;
   const isEditing = page?.mode?.isEditing;

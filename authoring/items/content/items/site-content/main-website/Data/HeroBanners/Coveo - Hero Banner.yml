@@ -1,0 +1,41 @@
+﻿---
+ID: "8366889b-62b9-47d1-8358-a9a2fcf3fb1c"
+Parent: "79a9dfe3-d529-4ed3-8105-dca4c0a3b25c"
+Template: "ebb89bff-86ff-496d-b4f7-57fe722342b6"
+Path: "/sitecore/content/main/main-website/Data/HeroBanners/Coveo - Hero Banner"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260610T010220Z
+    - ID: "2c186372-9b86-4940-b496-6ae5b5bdac3a"
+      Hint: Subtitle
+      Value: <p>Turn every shopper's intent into conversions, and every customer question into clarity. Grow revenue. Build loyalty. Connect your agents. Scale your enterprise.</p>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "61c5bc1a-453d-4416-8e01-b150cdcfa7b1"
+      Hint: PrimaryLink
+      Value: |
+        <link text="Schedule a Demo" anchor="" linktype="external" class="" title="" target="" querystring="" url="https://www.coveo.com/en/contact/demo" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a7a03629-fc36-4ad3-88bd-d831ea88e8a0"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "c61c7b75-21bd-4b9c-995e-671c9605de14"
+      Hint: Title
+      Value: "AI-Search & Conversational Discovery built for enterprise ROI"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260610T010230Z

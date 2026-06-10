@@ -273,6 +273,62 @@ export const Grid = ({ fields, params, page }: TestimonialBlockProps): JSX.Eleme
 /* ────────────────────────────────────────────
    WithPhoto — single quote with large author photo
    ──────────────────────────────────────────── */
+/* Coveo variant — customer quote cards on muted background */
+export const Coveo = ({ fields, params, page }: TestimonialBlockProps): JSX.Element => {
+  const { styles, RenderingIdentifier } = params;
+  const isEditing = page?.mode?.isEditing;
+  const datasource = fields?.data?.datasource;
+  if (!datasource) return <TestimonialBlockDefaultComponent />;
+  const items = datasource.children?.results || [];
+
+  return (
+    <div className={cn('component testimonial-block', styles)} id={RenderingIdentifier}>
+      <section
+        className="w-full px-4 py-16 md:py-24"
+        style={{ backgroundColor: 'var(--brand-muted, #F4F5F8)' }}
+      >
+        <div className="mx-auto max-w-7xl">
+          {(datasource.sectionTitle?.jsonValue?.value || isEditing) && (
+            <Text
+              field={datasource.sectionTitle?.jsonValue}
+              tag="h2"
+              className="mb-12 text-center text-3xl font-medium font-[var(--brand-heading-font,inherit)]"
+              style={{ color: 'var(--brand-fg, #111111)' }}
+            />
+          )}
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {items.map((item) => (
+              <div
+                key={item.id}
+                className="flex flex-col rounded-[var(--brand-card-radius,0.5rem)] bg-[var(--brand-bg,#ffffff)] p-8"
+              >
+                {(item.quoteText?.jsonValue?.value || isEditing) && (
+                  <ContentSdkRichText
+                    field={item.quoteText?.jsonValue}
+                    className="flex-1 text-base font-light leading-relaxed font-[var(--brand-body-font,inherit)]"
+                    style={{ color: 'var(--brand-fg, #111111)' }}
+                  />
+                )}
+                <div className="mt-6 pt-6" style={{ borderTop: '1px solid var(--brand-border, #E2E4EA)' }}>
+                  <AuthorAttribution item={item} isEditing={isEditing} />
+                </div>
+                {(item.companyLogo?.jsonValue?.value?.src || isEditing) && (
+                  <div className="mt-4">
+                    <ContentSdkImage
+                      field={item.companyLogo?.jsonValue}
+                      className="h-7 max-w-[120px] object-contain object-left opacity-80"
+                    />
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
 export const WithPhoto = ({ fields, params, page }: TestimonialBlockProps): JSX.Element => {
   const { styles, RenderingIdentifier } = params;
   const isEditing = page?.mode?.isEditing;

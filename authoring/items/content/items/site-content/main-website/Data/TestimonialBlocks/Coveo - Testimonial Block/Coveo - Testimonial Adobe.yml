@@ -1,0 +1,51 @@
+﻿---
+ID: "36e0f381-4f7e-4459-8da9-7250d53ac9da"
+Parent: "596bb29f-d8c7-4f56-bba8-183267371c59"
+Template: "29792b9c-9b29-4d8f-bf71-02084ee8102a"
+Path: "/sitecore/content/main/main-website/Data/TestimonialBlocks/Coveo - Testimonial Block/Coveo - Testimonial Adobe"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "14fe8ffd-a7db-46ef-a31f-14309c0d970e"
+      Hint: AuthorName
+      Value: Rosanna Stephens
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260610T013646Z
+    - ID: "4ee60288-ad54-4ee4-8ca6-c916eb588150"
+      Hint: AuthorImage
+      Value: |
+        <Image src="https://ze-dam.sitecoresandbox.cloud/api/public/content/87701-local-imgi_89_rosanna_stephens?v=2a7f956b" dam-id="VlUCXq0QTdO0-nNz3mDRrg" alt="rosanna stephens" dam-content-type="Image" thumbnailsrc="https://ze-dam.sitecoresandbox.cloud/api/gateway/87701/thumbnail" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "39ed104e-0a9c-4a01-9f9e-f21c1a250cfc"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "bc655a9b-c6dc-4241-9e83-374c9a3cfa01"
+      Hint: AuthorRole
+      Value: Product Management Lead, Workplace Search & Knowledge, Adobe
+    - ID: "d7e57a36-0c14-4b8a-9d98-68addf7143b5"
+      Hint: QuoteText
+      Value: <p>In just one year, we saved <strong>231,000 hours of productivity time</strong> for our employees.</p>
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260610T013711Z
+    - ID: "fa591afb-1f56-4080-9719-f953d845504b"
+      Hint: CompanyLogo
+      Value: |
+        <Image src="https://ze-dam.sitecoresandbox.cloud/api/public/content/84993-local-imgi_152_adobe-coveo-customer?v=5569b1f5" dam-id="CUhkGIVTRs2dn1dtc-sQtw" alt="adobe coveo customer" dam-content-type="Image" thumbnailsrc="https://ze-dam.sitecoresandbox.cloud/api/gateway/84993/thumbnail" />
+    - ID: "fd39f4e5-808d-4c62-a792-ced735c576fb"
+      Hint: CompanyName
+      Value: Adobe

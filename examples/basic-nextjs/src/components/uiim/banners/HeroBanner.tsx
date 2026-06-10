@@ -324,3 +324,43 @@ export const Minimal = ({ fields, params, page }: HeroBannerProps): JSX.Element 
     </div>
   );
 };
+
+/* Coveo variant — centered minimal hero, light weight heading, pill CTA */
+export const Coveo = ({ fields, params, page }: HeroBannerProps): JSX.Element => {
+  const { styles, RenderingIdentifier } = params;
+  const isEditing = page?.mode?.isEditing;
+
+  if (!fields) return <HeroBannerDefaultComponent />;
+
+  return (
+    <div className={cn('component hero-banner', styles)} id={RenderingIdentifier}>
+      <section
+        className="w-full px-4 py-20 md:py-28"
+        style={{
+          backgroundColor: 'var(--brand-bg, #ffffff)',
+          color: 'var(--brand-fg, #0E0F12)',
+        }}
+      >
+        <div className="mx-auto max-w-5xl space-y-8 text-center">
+          {(fields.Title?.value || isEditing) && (
+            <Text
+              field={fields.Title}
+              tag="h1"
+              className="text-4xl font-medium leading-[1.1] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl font-[var(--brand-heading-font,inherit)]"
+            />
+          )}
+          {(fields.Subtitle?.value || isEditing) && (
+            <ContentSdkRichText
+              field={fields.Subtitle}
+              className="mx-auto max-w-3xl text-lg font-light leading-relaxed md:text-xl"
+              style={{ color: 'var(--brand-muted-foreground)' }}
+            />
+          )}
+          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+            <PrimaryButton field={fields.PrimaryLink} isEditing={isEditing} />
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};

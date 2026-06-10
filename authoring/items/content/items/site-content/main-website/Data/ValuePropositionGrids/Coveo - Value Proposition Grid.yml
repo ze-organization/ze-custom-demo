@@ -1,0 +1,37 @@
+﻿---
+ID: "97e87fa3-c616-42f1-8c0e-24a1690ec325"
+Parent: "be69f95d-9d08-4c4b-adf3-59007b2e0bb4"
+Template: "c0e69319-ce82-4a4a-b23c-f291a306f7be"
+Path: "/sitecore/content/main/main-website/Data/ValuePropositionGrids/Coveo - Value Proposition Grid"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260610T010238Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9cd1d4c1-c214-48bc-91f3-d9c599cc42cd"
+    - ID: "98e43e53-fff0-4ef4-8241-fad86ed9e152"
+      Hint: Description
+      Value: <p>Coveo understands, optimizes, and personalizes across the entire customer journey, unlike other platforms.</p>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "d358f6d4-7ec5-48c5-8399-86fce2027f79"
+      Hint: Title
+      Value: Why top enterprises choose Coveo over everyone else
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260610T010249Z

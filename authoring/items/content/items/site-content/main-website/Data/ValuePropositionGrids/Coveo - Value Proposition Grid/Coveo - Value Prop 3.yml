@@ -1,0 +1,38 @@
+﻿---
+ID: "b2691eb9-ef35-4b15-899a-fae504183a38"
+Parent: "97e87fa3-c616-42f1-8c0e-24a1690ec325"
+Template: "18975833-7fd9-4ca6-a4dc-d01cd3454d4b"
+Path: "/sitecore/content/main/main-website/Data/ValuePropositionGrids/Coveo - Value Proposition Grid/Coveo - Value Prop 3"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260610T013650Z
+    - ID: "26ad50f0-0c17-4313-b9ca-58fb93ce4b30"
+      Hint: ItemTitle
+      Value: Engineered for the complexity of global enterprises
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "5eced858-efa9-446c-abae-a6601bd461a5"
+      Hint: ItemIcon
+      Value: |
+        <Image src="https://ze-dam.sitecoresandbox.cloud/api/public/content/84655-local-imgi_123_customer_awards?v=80190bca" dam-id="UkZVRJbQT_u2nPYaq-8Zzg" width="24" height="24" alt="customer awards" dam-content-type="Image" thumbnailsrc="https://ze-dam.sitecoresandbox.cloud/api/gateway/84655/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "55b611c9-4e68-4c27-ab3e-c55c611c9ba4"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260610T013718Z

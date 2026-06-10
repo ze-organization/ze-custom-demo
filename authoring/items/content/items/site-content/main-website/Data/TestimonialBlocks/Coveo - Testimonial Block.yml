@@ -1,0 +1,34 @@
+﻿---
+ID: "596bb29f-d8c7-4f56-bba8-183267371c59"
+Parent: "e5004e14-ea49-43b7-a093-006648a14a60"
+Template: "bbf97517-1fe5-405b-aae7-5309be26249a"
+Path: "/sitecore/content/main/main-website/Data/TestimonialBlocks/Coveo - Testimonial Block"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260610T010239Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "70398829-0ffa-4e5c-8b7c-0103cf5651c9"
+      Hint: SectionTitle
+      Value: What our customers say
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "565496f6-a282-478e-9e26-fe7cea9c5a71"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260610T010249Z

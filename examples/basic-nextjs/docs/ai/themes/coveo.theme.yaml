@@ -1,0 +1,119 @@
+client:
+  name: "Coveo"
+  sourceUrl: "https://www.coveo.com/"
+  extractedAt: "2026-06-09T19:30:00Z"
+  extractedBy: "sitecore-extract-theme"
+
+colors:
+  primary: "#00C8E8"
+  primaryForeground: "#0E0F12"
+  secondary: "#1A0F3D"
+  secondaryForeground: "#FFFFFF"
+  accent: "#00C8E8"
+  accentForeground: "#0E0F12"
+  background: "#FFFFFF"
+  foreground: "#0E0F12"
+  muted: "#F4F5F8"
+  mutedForeground: "#5C6370"
+  headerBackground: "#FFFFFF"
+  headerForeground: "#0E0F12"
+  footerBackground: "#1A0F3D"
+  footerForeground: "#E8EAF0"
+  border: "#E2E4EA"
+  ring: "#00C8E8"
+  extra:
+    - name: "gradientStart"
+      value: "#00D4FF"
+    - name: "gradientEnd"
+      value: "#00A8C8"
+    - name: "darkSection"
+      value: "#1A0F3D"
+
+typography:
+  headingFamily: "DM Sans"
+  headingWeight: "500"
+  bodyFamily: "DM Sans"
+  bodyWeight: "300"
+  monoFamily: "ui-monospace, monospace"
+  googleFontsUrl: "https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap"
+  scale:
+    hero: "clamp(2.5rem, 5vw, 6.25rem)"
+    h1: "100px"
+    h2: "48px"
+    h3: "32px"
+    body: "18px"
+    small: "14px"
+  headingTransform: "none"
+  letterSpacing: "normal"
+  lineHeight: "1.35"
+
+spacing:
+  density: "spacious"
+  sectionGap: "5rem"
+  containerMaxWidth: "1280px"
+  containerPadding: "1.5rem"
+
+shape:
+  borderRadius: "8px"
+  buttonRadius: "50px"
+  cardRadius: "8px"
+  imageRadius: "8px"
+  shadowStyle: "subtle"
+  borderStyle: "none"
+
+tone:
+  overall: "corporate"
+  colorMode: "mixed"
+  contrast: "high"
+  imagery: "photography"
+  heroStyle: "minimal-text"
+  cardStyle: "elevated"
+  navStyle: "solid-bar"
+
+tailwind:
+  colors:
+    brand:
+      primary: "#00C8E8"
+      secondary: "#1A0F3D"
+      accent: "#00C8E8"
+  fontFamily:
+    heading: ["DM Sans", "sans-serif"]
+    body: ["DM Sans", "sans-serif"]
+  borderRadius:
+    DEFAULT: "0.5rem"
+    button: "9999px"
+    card: "0.5rem"
+
+cssVariables: |
+  :root {
+    --brand-primary: #00C8E8;
+    --brand-primary-foreground: #0E0F12;
+    --brand-secondary: #1A0F3D;
+    --brand-secondary-foreground: #ffffff;
+    --brand-accent: #00C8E8;
+    --brand-accent-foreground: #0E0F12;
+    --brand-bg: #ffffff;
+    --brand-fg: #0E0F12;
+    --brand-muted: #F4F5F8;
+    --brand-muted-fg: #5C6370;
+    --brand-header-bg: #ffffff;
+    --brand-header-fg: #0E0F12;
+    --brand-footer-bg: #1A0F3D;
+    --brand-footer-fg: #E8EAF0;
+    --brand-border: #E2E4EA;
+    --brand-ring: #00C8E8;
+    --brand-heading-font: 'DM Sans', sans-serif;
+    --brand-body-font: 'DM Sans', sans-serif;
+    --brand-radius: 0.5rem;
+    --brand-button-radius: 9999px;
+    --brand-card-radius: 0.5rem;
+  }
+
+extraction:
+  confidence: "high"
+  method: "playwright-full"
+  notes:
+    - "Primary font is canada-type-gibson (Adobe Typekit). Substituted with DM Sans for demo."
+    - "CTA buttons use cyan-to-teal gradient; solid #00C8E8 used as primary token."
+    - "Dark navy sections (#1A0F3D) alternate with white content bands."
+    - "Pill-shaped buttons (50px border-radius) are a signature Coveo element."

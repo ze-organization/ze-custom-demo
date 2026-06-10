@@ -294,6 +294,43 @@ export const Transparent = ({ fields, params, page }: NavigationHeaderProps): JS
   );
 };
 
+/* Coveo variant — white header, spaced nav, pill CTA */
+export const Coveo = ({ fields, params, page }: NavigationHeaderProps): JSX.Element => {
+  const { styles, RenderingIdentifier } = params;
+  const isEditing = page?.mode?.isEditing;
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const datasource = fields?.data?.datasource;
+  if (!datasource) return <NavigationHeaderDefaultComponent />;
+
+  const links = datasource.children?.results || [];
+  const brandLogo = datasource.brandLogo?.jsonValue;
+
+  return (
+    <div className={cn('component navigation-header', styles)} id={RenderingIdentifier}>
+      <header
+        className="w-full"
+        style={{ backgroundColor: 'var(--brand-header-bg, #ffffff)' }}
+      >
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+          <Logo brandLogo={brandLogo} />
+          <NavLinks items={links} className="gap-8" />
+          <div className="flex items-center gap-3">
+            <CtaButton
+              label={datasource.ctaLabel?.jsonValue}
+              link={datasource.ctaLink?.jsonValue}
+              isEditing={isEditing}
+              className="rounded-[var(--brand-button-radius,9999px)] px-5"
+            />
+            <MenuButton open={menuOpen} onClick={() => setMenuOpen(!menuOpen)} />
+          </div>
+        </div>
+        <MobileMenu items={links} open={menuOpen} onClose={() => setMenuOpen(false)} />
+      </header>
+    </div>
+  );
+};
+
 export const Minimal = ({ fields, params }: NavigationHeaderProps): JSX.Element => {
   const { styles, RenderingIdentifier } = params;
 

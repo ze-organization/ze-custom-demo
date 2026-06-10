@@ -1,0 +1,45 @@
+﻿---
+ID: "0b1447d4-69f6-4271-88d8-0ba1c8d072d2"
+Parent: "6e643951-892d-4a9f-9a79-6a9cfad5d0d8"
+Template: "e2014bdc-3af2-4add-a731-86e873ebf24c"
+Path: "/sitecore/content/main/main-website/Data/FeatureCardsGrids/Coveo - Feature Cards Grid - Blog/Coveo - Blog 1"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260610T013652Z
+    - ID: "3d6a0f6b-523e-491a-8b4d-2b84f10855c2"
+      Hint: CardLink
+      Value: |
+        <link text="Read more" anchor="" linktype="external" class="" title="" target="" querystring="" url="https://www.coveo.com/en/relevance-360/search-to-agentic-commerce/the-future-of-enterprise-commerce" />
+    - ID: "3f85410a-d1a3-426d-9908-777c3a0b7de0"
+      Hint: CardDescription
+      Value: <p>The future of enterprise commerce</p>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f1564f80-b535-4fdb-97c2-f5db7097245b"
+    - ID: "ad732d62-2a3e-452a-b7d6-8f943b616f6d"
+      Hint: CardImage
+      Value: |
+        <Image src="https://ze-dam.sitecoresandbox.cloud/api/public/content/86037-local-imgi_24_the_future_of_enterprise_commerce?v=e0f773e0" dam-id="4qrdglF2QQeNkuIlkpDTBg" alt="the future of enterprise commerce" dam-content-type="Image" thumbnailsrc="https://ze-dam.sitecoresandbox.cloud/api/gateway/86037/thumbnail" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "c0500111-9439-41c0-89e5-d44cf419ef50"
+      Hint: CardTitle
+      Value: From Search to Agentic AI
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260610T013725Z

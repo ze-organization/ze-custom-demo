@@ -1,0 +1,44 @@
+﻿---
+ID: "074c4480-357c-4ab0-9e26-ffa8c1b83d11"
+Parent: "7f9996f7-e706-4b70-86ac-82eb8b801d0c"
+Template: "d7a407de-322f-432e-8d2c-4f46d11835b1"
+Path: "/sitecore/content/main/main-website/Data/TrustStatsRows/Coveo - Trust Stats/Coveo - Stat SAP"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260610T010247Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "6ad625f0-b625-4601-8e26-1f5ef2fc67a5"
+      Hint: StatDescription
+      Value: <p>SAP</p>
+    - ID: "752cd821-afcc-422a-8eae-54da184bffad"
+      Hint: StatIcon
+      Value: |
+        <Image src="https://ze-dam.sitecoresandbox.cloud/api/public/content/86165-local-imgi_262_sap-concur-no-padding?v=2773bc74" dam-id="N4vxTuiYSXi0LChT_9JHXw" width="201" height="41" alt="sap concur no padding" dam-content-type="Image" thumbnailsrc="https://ze-dam.sitecoresandbox.cloud/api/gateway/86165/thumbnail" />
+    - ID: "7695364f-149f-49c0-b08a-4a8ee6c1b9d1"
+      Hint: StatLabel
+      Value: "Self-service success rate"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d08937fc-d8c9-4369-947a-fccbba9402b5"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "c477d979-2d2d-4aff-bccc-aa8b1783a8d7"
+      Hint: StatValue
+      Value: 83.5%
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260610T013624Z

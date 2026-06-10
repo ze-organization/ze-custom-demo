@@ -1,0 +1,34 @@
+﻿---
+ID: "6e643951-892d-4a9f-9a79-6a9cfad5d0d8"
+Parent: "bab76c01-9a6e-49d5-9f44-22d7edbe13fe"
+Template: "e94d3c21-7de5-4270-b691-8e29673a1e2c"
+Path: "/sitecore/content/main/main-website/Data/FeatureCardsGrids/Coveo - Feature Cards Grid - Blog"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260610T010239Z
+    - ID: "3775c623-2a5c-4d86-a41f-9717038d7d73"
+      Hint: Title
+      Value: "Be part of what's next in AI-Relevance"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3313478c-0374-4131-8b1c-e2e15896b863"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260610T013728Z

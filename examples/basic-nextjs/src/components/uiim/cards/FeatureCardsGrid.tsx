@@ -277,6 +277,138 @@ export const WithImages = ({ fields, params, page }: FeatureCardsGridProps): JSX
 /* ────────────────────────────────────────────
    Carousel — horizontal scrolling cards with dots + arrows
    ──────────────────────────────────────────── */
+/* Coveo variant — adapts layout: solutions grid, dark content cards, demo scroll, blog row */
+export const Coveo = ({ fields, params, page }: FeatureCardsGridProps): JSX.Element => {
+  const { styles, RenderingIdentifier } = params;
+  const isEditing = page?.mode?.isEditing;
+  const datasource = fields?.data?.datasource;
+  if (!datasource) return <FeatureCardsGridDefaultComponent />;
+  const cards = datasource.children?.results || [];
+  const title = datasource.title?.jsonValue?.value ?? '';
+  const isDark =
+    styles?.includes('coveo-dark') ||
+    (!title && cards.length === 4);
+  const isDemoScroll = cards.length >= 5;
+  const isSolutions = title.toLowerCase().includes('solution');
+
+  const sectionBg = isDark
+    ? 'var(--brand-secondary, #1A0F3D)'
+    : isSolutions
+      ? 'var(--brand-muted, #F4F5F8)'
+      : 'var(--brand-bg, #ffffff)';
+  const textColor = isDark
+    ? 'var(--brand-secondary-foreground, #ffffff)'
+    : 'var(--brand-fg, #111111)';
+  const mutedColor = isDark
+    ? 'rgba(255,255,255,0.75)'
+    : 'var(--brand-muted-fg, #5C6370)';
+
+  const renderCard = (card: FeatureCardItemFields) => (
+    <div
+      key={card.id}
+      className={cn(
+        'flex flex-col overflow-hidden rounded-[var(--brand-card-radius,0.5rem)]',
+        isDark ? 'bg-white/5' : 'bg-[var(--brand-bg,#ffffff)]',
+        !isDark && !isDemoScroll && 'border border-[var(--brand-border,#E2E4EA)]'
+      )}
+    >
+      {(card.cardImage?.jsonValue?.value?.src || isEditing) && (
+        <ContentSdkImage
+          field={card.cardImage?.jsonValue}
+          className={cn(
+            'w-full object-cover',
+            isDemoScroll ? 'aspect-video' : isSolutions ? 'aspect-[4/3]' : 'aspect-[16/10]'
+          )}
+        />
+      )}
+      <div className="flex flex-1 flex-col p-5 md:p-6">
+        {(card.cardTitle?.jsonValue?.value || isEditing) && (
+          <Text
+            field={card.cardTitle?.jsonValue}
+            tag="h3"
+            className={cn(
+              'font-medium font-[var(--brand-heading-font,inherit)]',
+              isDemoScroll ? 'text-base' : 'text-lg md:text-xl'
+            )}
+            style={{ color: textColor }}
+          />
+        )}
+        {(card.cardDescription?.jsonValue?.value || isEditing) && (
+          <ContentSdkRichText
+            field={card.cardDescription?.jsonValue}
+            className="mt-2 flex-1 text-sm font-light font-[var(--brand-body-font,inherit)]"
+            style={{ color: mutedColor }}
+          />
+        )}
+        {(card.cardLink?.jsonValue?.value?.href || isEditing) && (
+          <ContentSdkLink
+            field={card.cardLink?.jsonValue}
+            className={cn(
+              'mt-4 inline-flex w-fit items-center text-sm font-semibold transition-opacity hover:opacity-80',
+              isDark
+                ? 'rounded-[var(--brand-button-radius,9999px)] border border-white/30 px-5 py-2'
+                : 'rounded-[var(--brand-button-radius,9999px)] px-5 py-2'
+            )}
+            style={{
+              color: isDark ? 'var(--brand-secondary-foreground, #ffffff)' : 'var(--brand-primary-foreground, #0E0F12)',
+              backgroundColor: isDark ? 'transparent' : 'var(--brand-primary)',
+            }}
+          />
+        )}
+      </div>
+    </div>
+  );
+
+  return (
+    <div className={cn('component feature-cards-grid', styles)} id={RenderingIdentifier}>
+      <section className="w-full px-4 py-16 md:py-24" style={{ backgroundColor: sectionBg }}>
+        <div className="mx-auto max-w-7xl">
+          {(title || isEditing) && (
+            <div className="mx-auto mb-12 max-w-3xl text-center">
+              {(datasource.title?.jsonValue?.value || isEditing) && (
+                <Text
+                  field={datasource.title?.jsonValue}
+                  tag="h2"
+                  className="text-3xl font-medium tracking-tight sm:text-4xl font-[var(--brand-heading-font,inherit)]"
+                  style={{ color: textColor }}
+                />
+              )}
+              {(datasource.description?.jsonValue?.value || isEditing) && (
+                <ContentSdkRichText
+                  field={datasource.description?.jsonValue}
+                  className="mt-4 text-lg font-light font-[var(--brand-body-font,inherit)]"
+                  style={{ color: mutedColor }}
+                />
+              )}
+            </div>
+          )}
+
+          {isDemoScroll ? (
+            <div className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory">
+              {cards.map((card) => (
+                <div key={card.id} className="min-w-[280px] max-w-[320px] shrink-0 snap-start md:min-w-[300px]">
+                  {renderCard(card)}
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div
+              className={cn(
+                'grid gap-6',
+                isDark || cards.length === 4
+                  ? 'md:grid-cols-2'
+                  : 'md:grid-cols-2 lg:grid-cols-4'
+              )}
+            >
+              {cards.map(renderCard)}
+            </div>
+          )}
+        </div>
+      </section>
+    </div>
+  );
+};
+
 export const Carousel = ({ fields, params, page }: FeatureCardsGridProps): JSX.Element => {
   const { styles, RenderingIdentifier } = params;
   const isEditing = page?.mode?.isEditing;

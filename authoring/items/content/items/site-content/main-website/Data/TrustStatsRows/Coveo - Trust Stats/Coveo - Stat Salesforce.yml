@@ -1,0 +1,44 @@
+﻿---
+ID: "e3a848a2-24a5-431c-a0dc-42e141699e84"
+Parent: "7f9996f7-e706-4b70-86ac-82eb8b801d0c"
+Template: "d7a407de-322f-432e-8d2c-4f46d11835b1"
+Path: "/sitecore/content/main/main-website/Data/TrustStatsRows/Coveo - Trust Stats/Coveo - Stat Salesforce"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260610T010245Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "6ad625f0-b625-4601-8e26-1f5ef2fc67a5"
+      Hint: StatDescription
+      Value: <p>Salesforce</p>
+    - ID: "752cd821-afcc-422a-8eae-54da184bffad"
+      Hint: StatIcon
+      Value: |
+        <Image src="https://ze-dam.sitecoresandbox.cloud/api/public/content/86142-local-imgi_259_salesforce-coveo-customer?v=8d2eee75" dam-id="VNhwKvYWTmeHcLHbDupCrQ" alt="salesforce coveo customer" dam-content-type="Image" thumbnailsrc="https://ze-dam.sitecoresandbox.cloud/api/gateway/86142/thumbnail" />
+    - ID: "7695364f-149f-49c0-b08a-4a8ee6c1b9d1"
+      Hint: StatLabel
+      Value: Average order value
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e0efba6f-e55d-445f-bb45-6ba308bdcbad"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "c477d979-2d2d-4aff-bccc-aa8b1783a8d7"
+      Hint: StatValue
+      Value: +600%
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260610T013622Z

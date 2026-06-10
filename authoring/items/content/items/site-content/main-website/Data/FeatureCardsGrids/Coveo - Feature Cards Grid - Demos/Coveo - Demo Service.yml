@@ -1,0 +1,42 @@
+﻿---
+ID: "e5fe02e9-ce45-4244-8db5-2eff4bb3db89"
+Parent: "9f87d8cb-baad-4627-b2b5-bb9c244e6992"
+Template: "e2014bdc-3af2-4add-a731-86e873ebf24c"
+Path: "/sitecore/content/main/main-website/Data/FeatureCardsGrids/Coveo - Feature Cards Grid - Demos/Coveo - Demo Service"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260610T013652Z
+    - ID: "3d6a0f6b-523e-491a-8b4d-2b84f10855c2"
+      Hint: CardLink
+      Value: |
+        <link text="See demos" anchor="" linktype="external" class="" title="" target="" querystring="" url="https://www.coveo.com/en/demo-video-hub" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0efc5141-cb45-4341-a866-394a997ccf8d"
+    - ID: "ad732d62-2a3e-452a-b7d6-8f943b616f6d"
+      Hint: CardImage
+      Value: |
+        <Image src="https://ze-dam.sitecoresandbox.cloud/api/public/content/87380-local-imgi_60_personalization_anonymous_thumbnail?v=271e4298" dam-id="khvVIz8RT0C0BwhwIBG_qA" alt="personalization anonymous thumbnail" dam-content-type="Image" thumbnailsrc="https://ze-dam.sitecoresandbox.cloud/api/gateway/87380/thumbnail" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "c0500111-9439-41c0-89e5-d44cf419ef50"
+      Hint: CardTitle
+      Value: Personalization
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260610T013719Z

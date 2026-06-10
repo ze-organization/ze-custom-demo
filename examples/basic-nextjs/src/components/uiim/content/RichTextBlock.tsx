@@ -99,6 +99,40 @@ export const Centered = ({ fields, params, page }: RichTextBlockProps): JSX.Elem
 /* ────────────────────────────────────────────
    Narrow — constrained width for long-form readability
    ──────────────────────────────────────────── */
+/* Coveo variant — centered intro block, light typography */
+export const Coveo = ({ fields, params, page }: RichTextBlockProps): JSX.Element => {
+  const { styles, RenderingIdentifier } = params;
+  const isEditing = page?.mode?.isEditing;
+  if (!fields) return <RichTextBlockDefaultComponent />;
+
+  return (
+    <div className={cn('component rich-text-block', styles)} id={RenderingIdentifier}>
+      <section
+        className="w-full px-4 py-16 md:py-24"
+        style={{ backgroundColor: 'var(--brand-bg, #ffffff)' }}
+      >
+        <div className="mx-auto max-w-4xl text-center">
+          {(fields.Title?.value || isEditing) && (
+            <Text
+              field={fields.Title}
+              tag="h2"
+              className="mb-6 text-3xl font-medium leading-tight md:text-4xl lg:text-5xl font-[var(--brand-heading-font,inherit)]"
+              style={{ color: 'var(--brand-fg, #111111)' }}
+            />
+          )}
+          {(fields.Body?.value || isEditing) && (
+            <ContentSdkRichText
+              field={fields.Body}
+              className="mx-auto max-w-3xl text-lg font-light leading-relaxed font-[var(--brand-body-font,inherit)]"
+              style={{ color: 'var(--brand-muted-fg, #5C6370)' }}
+            />
+          )}
+        </div>
+      </section>
+    </div>
+  );
+};
+
 export const Narrow = ({ fields, params, page }: RichTextBlockProps): JSX.Element => {
   const { styles, RenderingIdentifier } = params;
   const isEditing = page?.mode?.isEditing;
